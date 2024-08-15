@@ -1,0 +1,21 @@
+.AdditionaInfo {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.AdditionaInfo p {
+    font-size: 11px;
+    color: #ffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    .AdditionaInfo {
+        /* width: 100vw; */
+    }
+}

@@ -1,0 +1,171 @@
+.shirts-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.Banner-arabe,
+.Banner-diseñador,
+.Banner-nicho {
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+.Banner-arabe {
+    background-image: url("../icons/bannerProductos.png");
+}
+
+.Banner-diseñador {
+    background-image: url("../icons/bannerDiseñador.png");
+}
+
+.Banner-nicho {
+    background-image: url("../icons/bannerNicho.png");
+}
+
+.shirts-container .Pro-Container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shirts-container a {
+    text-decoration: none;
+}
+
+.shirts-container .pro {
+    /* width: 23%; */
+    width: 250px;
+    height: 400px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.shirts-container .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.shirts-container .pro img {
+    width: 245px;
+    height: 260px;
+    border-radius: 20px;
+}
+
+.shirts-container .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+.shirts-container .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+.shirts-container .pro .des h5 {
+    margin: 10px 0 10px 0;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.shirts-container .pro .des .star img {
+    width: 13px;
+    height: 13px;
+}
+
+.shirts-container .pro .des h4 {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+.shirts-container .pro a .shopping {
+    width: 40px;
+    height: 40px;
+    padding: 5px 5px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+@media (max-width: 600px) {
+    .shirts-container .Pro-Container {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .Banner-arabe,
+    .Banner-diseñador,
+    .Banner-nicho {
+        background-position: center;
+        background-attachment: local;
+    }
+
+    .shirts-container .pro {
+        min-width: 0;
+        width: 162px;
+        height: 216px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
+    .shirts-container .pro img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .shirts-container .pro .des {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .shirts-container .pro .des span {
+        margin-left: 2px;
+    }
+
+    .shirts-container .pro .des h5 {
+        font-size: 11px;
+        font-weight: 500;
+        margin: 5px 0 5px 0;
+    }
+
+    .shirts-container .pro .des h4 {
+        margin: 10px 0 0 5px;
+        font-size: 13px;
+    }
+
+    div .star {
+        display: none;
+    }
+
+    .shirts-container .pro a .shopping {
+        width: 20px;
+        height: 20px;
+        bottom: 5px;
+        right: 10px;
+    }
+}

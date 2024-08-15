@@ -1,0 +1,272 @@
+.page-header {
+    background-image: url("../icons/addtocart.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /* padding: 14px; */
+}
+
+.page-header h2,
+.page-header p {
+    color: #fff;
+}
+
+
+.AddToCart .section-p1 {
+    /* overflow-x: auto; */
+    min-height: 400px;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+.AddToCart .section-p1 .Detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+}
+
+.Detail-container .img-product {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Detail-container .img-product img {
+    width: 50%;
+    height: 80%;
+}
+
+.Detail-container .Detail-product {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    /* gap: 30px; */
+}
+
+.Detail-product .Details {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Details h5 {
+    font-size: 32px;
+}
+
+.Details span {
+    font-weight: 500;
+    color: lightsteelblue;
+}
+
+.Details h4 {
+    font-weight: 500;
+    /* font-family: "Ubuntu", sans-serif; */
+}
+
+.Details button {
+    height: 40px;
+    margin-bottom: 10px;
+    border: none;
+    color: black;
+    font-weight: 800;
+    background-color: rgb(235, 234, 234);
+    border-radius: 20px;
+    transition: ease-in 0.2s;
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 2px;
+}
+
+.Details button.AddToCart-Item:hover {
+    background-color: black;
+    color: #ffff;
+}
+
+.Details button.Whatsapp-Button:hover {
+    background-color: #00bb2d;
+    color: #ffff;
+}
+
+
+
+
+
+
+/* .AddToCart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+.AddToCart table .tshirt {
+    width: 70px;
+    border-radius: 10px;
+}
+
+.AddToCart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+.AddToCart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+.AddToCart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+.AddToCart table td:nth-child(4),
+.AddToCart table td:nth-child(5) .AddToCart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+.AddToCart table td:nth-child(5) {
+    display: grid;
+    place-content: center;
+} */
+
+/* .AddToCart table td:nth-child(6) {
+    text-align: center;
+}
+
+.AddToCart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+    margin: 0;
+    border: 1px solid gray;
+}
+
+.AddToCart table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+.AddToCart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 18px 0;
+}
+
+.AddToCart table tbody tr td {
+    padding: 15px;
+}
+
+.AddToCart table tbody td {
+    font-size: 15px;
+} */
+
+.AddToCart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subtotal button {
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+
+.subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+.subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.subtotal table td {
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .page-header {
+        width: 100%;
+        height: 200px;
+    }
+
+    .AddToCart .section-p1 {
+        padding: 0;
+        width: 100%;
+        /* min-height: 400px; */
+    }
+
+    .AddToCart .section-p1 .Detail-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .Detail-container .img-product img {
+        width: 296px;
+        height: 296px;
+    }
+
+    .Detail-container .Detail-product {
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    .Detail-product .Details{
+        width: 90%;
+        align-items: center;
+    }
+
+    .Details h5 {
+        font-size: 27px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .Details h4 {
+        text-align: center;
+        margin: 10px 0 20px 0;
+        font-size: 19px;
+        font-weight: 700;
+        color: #088178;
+    }
+
+    .Details p {
+        display: none;
+    }
+
+    .Details span {
+        margin: 5px;
+    }
+
+    .Details button {
+        font-size: 13px;
+        width: 80%;
+        font-family: "Didact Gothic", sans-serif;
+    }
+}
