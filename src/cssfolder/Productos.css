@@ -49,14 +49,15 @@
     border: 1px solid #cce7d0;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
     margin: 15px 0;
     transition: 0.3s ease;
     position: relative;
+    background-color: #f5f5f5;
 }
 
 .shirts-container .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.07);
 }
 
 .shirts-container .pro img {
@@ -124,7 +125,7 @@
     .shirts-container .pro {
         min-width: 0;
         width: 162px;
-        height: 216px;
+        height: 220px;
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -134,6 +135,7 @@
     .shirts-container .pro img {
         width: 140px;
         height: 140px;
+        margin-top: 5px;
     }
 
     .shirts-container .pro .des {
@@ -148,13 +150,13 @@
     }
 
     .shirts-container .pro .des h5 {
-        font-size: 11px;
-        font-weight: 500;
+        font-size: 13px;
+        font-weight: 600;
         margin: 5px 0 5px 0;
     }
 
     .shirts-container .pro .des h4 {
-        margin: 10px 0 0 5px;
+        margin: 7px 0 0 5px;
         font-size: 13px;
     }
 

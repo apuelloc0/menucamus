@@ -46,6 +46,7 @@
 .Detail-container .img-product img {
     width: 50%;
     height: 80%;
+    border-radius: 20px;
 }
 
 .Detail-container .Detail-product {
@@ -73,7 +74,8 @@
 }
 
 .Details h4 {
-    font-weight: 500;
+    font-weight: 700;
+    color: #088178;
     /* font-family: "Ubuntu", sans-serif; */
 }
 
@@ -233,10 +235,10 @@
     .Detail-container .Detail-product {
         width: 100%;
         justify-content: center;
-        
+
     }
 
-    .Detail-product .Details{
+    .Detail-product .Details {
         width: 90%;
         align-items: center;
     }

@@ -8,7 +8,7 @@ const ButtonCategories = () => {
             <h2>Categorias</h2>
             <div className="Button-category">
                 <Link to={`/productos/arabe`}><button>Árabe</button></Link>
-                <Link to={`/productos/diseñador`}><button>Diseñador</button></Link>
+                <Link to={`/productos/disenador`}><button>Diseñador</button></Link>
                 <Link to={`/productos/nicho`}><button>Nicho</button></Link>
             </div>
         </div>

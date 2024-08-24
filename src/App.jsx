@@ -8,6 +8,7 @@ import Whatsapp from './components/Whatsapp'
 import Productos from './components/Productos'
 import Footer from './components/Footer'
 import AdditionaInfo from './components/AdditionaInfo'
+import Checkout from './components/Checkout'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/productos/:routeId" element={<Productos />} />
           <Route path="/:category/:id" element={<AddToCart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

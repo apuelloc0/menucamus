@@ -99,6 +99,10 @@
     color: #ffff;
 }
 
+.Ordering button a:hover {
+    color: #ffffff;
+}
+
 .Ordering-total {
     width: 100%;
     display: flex;
@@ -154,7 +158,7 @@
     }
 
     .productsContainer {
-        height: 500px;
+        height: 470px;
         width: 100%;
     }
 
@@ -183,11 +187,12 @@
     }
 
     .Ordering {
-        margin-top: 10px;
+        /* margin-top: 10px; */
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        gap: 10px;
     }
 
     .Ordering p {
@@ -206,9 +211,15 @@
 
     .Ordering button {
         width: 80%;
+        height: 36px;
+    }
+
+    .Ordering button a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         font-weight: 600;
         font-family: "Ubuntu", sans-serif;
         letter-spacing: 1px;
-        height: 36px;
     }
 }

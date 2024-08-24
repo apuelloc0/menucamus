@@ -19,7 +19,7 @@
 }
 
 .Hero-images {
-    background-image: url("../icons/pexel2.jpg");
+    background-image: url("../icons/CaballeroPerfumes1.jpg");
     width: 50%;
     height: 80%;
     background-size: cover;
@@ -358,15 +358,15 @@
 @media (max-width: 600px) {
     .Home .hero {
         width: 100%;
-        height: 422px;
+        height: 500px;
         padding: 0;
     }
 
-    .Hero-images{
+    .Hero-images {
         display: none;
     }
 
-    .Hero.info{
+    .Hero.info {
         width: 100%;
     }
 

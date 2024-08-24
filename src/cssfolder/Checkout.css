@@ -1,0 +1,134 @@
+.Checkout {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.banner-Checkout {
+    width: 100%;
+    background-image: url("../icons/addtocart.png");
+}
+
+.Checkout-info {
+    width: 55%;
+}
+
+.Checkout-products {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* border-left: 1px solid lightgray; */
+}
+
+.Checkout-total {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.Checkout-total div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Checkout-total p.total {
+    padding: 0 50px 0 10px;
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+}
+
+.Checkout-total div:nth-child(1) p.total {
+    padding: 0 50px 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.productsCheckout {
+    width: 90%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cartItem-Checkout {
+    width: 100%;
+    display: flex;
+}
+
+.Checkout-items {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Checkout-items .Checkout-items-left {
+    display: flex;
+    gap: 10px;
+}
+
+.Checkout-items-left img {
+    width: 80px;
+    height: 80px;
+}
+
+.Checkout-items-left p {
+    color: #465b52;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .Checkout {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .Checkout-info {
+        width: 90%;
+    }
+
+    .Checkout-products {
+        width: 90%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .productsCheckout {
+        width: 100%;
+        padding: 0;
+    }
+
+    .Checkout-items-right .right-container {
+        width: 38px;
+    }
+
+    .Checkout-total {
+        width: 100%;
+    }
+
+    .Checkout-total p.total {
+        padding: 0 20px 0 20px;
+        font-size: 21px;
+    }
+
+    .Checkout-total div:nth-child(1) p.total {
+        font-size: 17px;
+        padding: 0 20px 0 20px;
+
+    }
+
+}

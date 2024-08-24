@@ -1,8 +1,10 @@
 import "../cssfolder/Home.css";
-import Productos from "../components/Productos";
-// import ButtonCategories from "../components/ButtonCategories";
+import ButtonCategories from "../components/ButtonCategories";
+import ProductosHome from "../components/ProductosHome";
 
 const Home = () => {
+
+    // const { arabe, nicho, diseñador } = products
 
     return (
         <div className='Home'>
@@ -16,15 +18,15 @@ const Home = () => {
                 </div>
             </div>
 
-            <Productos />
+            <ButtonCategories />
+
+            <ProductosHome />
 
             <div className="Home banner section-m1">
                 <h4>Repair Services</h4>
                 <h2>Up to <span>70% Off</span> - All t-Shirts & Accessories</h2>
                 <button class="normal">Explore More</button>
             </div>
-
-            {/* <Productos /> */}
 
             <div className="Home sm-banner section-p1">
                 <div className="banner-box">

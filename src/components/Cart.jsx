@@ -4,27 +4,11 @@ import "../cssfolder/Cart.css";
 // import close from "../icons/x.png";
 // import cart from "../icons/shopping.svg";
 import ItemCart from './ItemCart';
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cartOpen, setProductsLength }) => {
 
     const { cartItems } = useContext(CartContext)
-
-
-    // ----Enviar pedido a Whatsapp---------
-    const realizarPedido = () => {
-        // crear mensaje con los productos
-        const mensaje = `Hola me gustaria realizar el pedido: ${cartItems.map((producto) => `${producto.name} - ${producto.price} - ${producto.amount}`)}`
-
-        const numeroTelefonico = "4266934611"
-
-        // const enlaceWha = `https://wa.me/${numeroTelefonico}?text=Hola,%20me%20gustaria%20realizar%20el%20pedido:%0A${mensaje}`
-
-        const enlaceWha = `https://wa.me/${numeroTelefonico}?text=${mensaje}`
-        // console.log(mensaje)
-
-        // Redirigir a Whatsapp
-        window.open(enlaceWha, "_blank")
-    }
 
     useEffect(() => {
         setProductsLength(
@@ -54,7 +38,7 @@ const Cart = ({ cartOpen, setProductsLength }) => {
                     <p className='cart-total'>${total}</p>
                 </div>
                 <p>El costo de envío es totalmente GRATIS!</p>
-                <button onClick={() => realizarPedido()}>REALIZAR PEDIDO</button>
+                <button><Link to="/checkout">Ir a Checkout</Link></button>
             </div>
         </div>
     )
