@@ -9,17 +9,6 @@ const ProductosHome = () => {
 
     const { products, loading } = useFetch(`http://localhost:4000/`)
     const { arabe, disenador, nicho } = products
-    // console.log(disenador)
-
-    // let lista = []
-
-    // if (category === "arabe") {
-    //     lista = arabe || []
-    // } else if (category === "diseñador") {
-    //     lista = disenador || []
-    // } else if (category === "nicho") {
-    //     lista = nicho || []
-    // }
 
     return (
         <div className="shirts-container">
@@ -57,7 +46,7 @@ const ProductosHome = () => {
                 <button className='See-more-button'><Link to={"/productos/arabe"}>Ver más</Link></button>
             </div>
 
-            <div className="Banner-diseñador"></div>
+            <div className="Banner-disenador"></div>
             <div className="Pro-Container">
 
                 {

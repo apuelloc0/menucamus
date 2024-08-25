@@ -14,12 +14,12 @@
     /* flex-direction: column; */
     align-items: center;
     background-attachment: fixed;
-    background-image: url("../icons/pexel5.jpg");
+    background-image: url("../icons/pexel5.webp");
     /* gap: 30px; */
 }
 
 .Hero-images {
-    background-image: url("../icons/CaballeroPerfumes1.jpg");
+    background-image: url("../icons/CaballeroPerfumes1.webp");
     width: 50%;
     height: 80%;
     background-size: cover;
@@ -143,7 +143,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../icons/pexel5.jpg");
+    background-image: url("../icons/pexel5.webp");
     background-attachment: fixed;
     width: 100%;
     height: 40vh;
@@ -192,7 +192,7 @@
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    background-image: url("../icons/pexel1.jpg");
+    background-image: url("../icons/pexel1.webp");
     width: 35%;
     height: 400px;
     background-size: cover;
@@ -202,7 +202,7 @@
 }
 
 .sm-banner .banner-box2 {
-    background-image: url("../icons/pexel2.jpg");
+    background-image: url("../icons/pexel2.webp");
     width: 50%;
 }
 
@@ -246,7 +246,7 @@
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    background-image: url("../icons/pexel3.jpg");
+    background-image: url("../icons/pexel3.webp");
     min-width: 27%;
     height: 400px;
     background-size: cover;
@@ -256,11 +256,11 @@
 }
 
 .banner3 .banner-box2 {
-    background-image: url("../icons/pexel6.jpg");
+    background-image: url("../icons/pexel6.webp");
 }
 
 .banner3 .banner-box3 {
-    background-image: url("../icons/pexel7.jpg");
+    background-image: url("../icons/pexel7.webp");
 }
 
 .banner3 h2 {
