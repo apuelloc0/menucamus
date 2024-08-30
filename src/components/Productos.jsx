@@ -1,36 +1,41 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import "../cssfolder/Productos.css";
 import star from "../icons/staryellow.png";
 import cart from "../icons/shop-cart.svg";
 import { CartContext } from '../Context/CartContext';
 import Loading from './Loading';
-import { useFetch } from '../UseFetch';
-
-// http://localhost:4000/productos
+import useSheets from '../useSheets';
+import ButtonCategories from './ButtonCategories'; // Importa ButtonCategories
 
 const Productos = ({ routeCategory }) => {
+    const { addItemToCart } = useContext(CartContext);
+    const [filter, setFilter] = useState(''); // Estado para el filtro
 
-    const { addItemToCart } = useContext(CartContext)
-    const { routeId = routeCategory } = useParams();
+    const { data, loading, error } = useSheets(
+        'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
+        '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
+        'Class Data!A2:F',
+        filter // Pasar el filtro al custom hook
+    );
 
-    const { products, loading } = useFetch(`http://localhost:4000/productos/${routeId}`)
+    // Asignar IDs únicos a cada producto
+    const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
 
     return (
         <div className="shirts-container">
-
-            {
-                routeId && <div className={`Banner-${routeId}`}></div>
-            }
+            <ButtonCategories setFilter={setFilter} /> {/* Incluye ButtonCategories */}
 
             <div className="Pro-Container">
                 {
-                    products.map((shirt, i) => {
-                        return <Link key={i} to={`/${shirt.marca}/${shirt.id}`}>
+                    productosConId.map((shirt, i) => (
+                        <Link key={i} to={""}>
                             <div key={i} className="pro">
                                 <img src={shirt.img} alt={shirt.name} />
                                 <div className="des">
                                     <span>{shirt.marca}</span>
+                                    <span>{shirt.capacidad}</span>
                                     <h5>{shirt.name}</h5>
                                     <div className="star">
                                         <img src={star} alt="" />
@@ -41,63 +46,124 @@ const Productos = ({ routeCategory }) => {
                                     </div>
                                     <h4>${shirt.price}</h4>
                                 </div>
-                                <Link onClick={() => {
-
-                                    addItemToCart(shirt)
-                                }}><img className="shopping" src={cart} alt="" /></Link>
+                                <Link onClick={() => addItemToCart(shirt)}>
+                                    <img className="shopping" src={cart} alt="" />
+                                </Link>
                             </div>
                         </Link>
-                    })
+                    ))
                 }
             </div>
 
-            {
-                loading && <Loading />
-            }
-
+            {loading && <Loading />}
         </div>
-    )
+    );
 }
 
-export default Productos
+export default Productos;
 
 
-{/* <div className="shirts-container">
 
-{
-    routeId && <div className={`Banner-${routeId}`}></div>
-}
 
-<div className="Pro-Container">
-    {
-        products.map((shirt, i) => {
-            return <Link key={i} to={`/${shirt.marca}/${shirt.id}`}>
-                <div key={i} className="pro">
-                    <img src={shirt.img} alt={shirt.name} />
-                    <div className="des">
-                        <span>{shirt.marca}</span>
-                        <h5>{shirt.name}</h5>
-                        <div className="star">
-                            <img src={star} alt="" />
-                            <img src={star} alt="" />
-                            <img src={star} alt="" />
-                            <img src={star} alt="" />
-                            <img src={star} alt="" />
-                        </div>
-                        <h4>${shirt.price}</h4>
-                    </div>
-                    <Link onClick={() => {
+// const { data, loading, error } = useSheets(
+//     'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
+//     '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
+//     'Class Data!A2:F'
+// );
 
-                        addItemToCart(shirt)
-                    }}><img className="shopping" src={cart} alt="" /></Link>
-                </div>
-            </Link>
-        })
-    }
-</div>
 
-{
-    loading && <Loading />
-}
+// {
+//     data.map((shirt, i) => {
+//         return <Link key={i} to={`/${shirt.marca}/${shirt.id}`}>
+//             <div key={i} className="pro">
+//                 <img src={shirt.img} alt={shirt.name} />
+//                 <div className="des">
+//                     <span>{shirt.marca}</span>
+//                     <span>{shirt.capacidad}</span>
+//                     <h5>{shirt.name}</h5>
+//                     <div className="star">
+//                         <img src={star} alt="" />
+//                         <img src={star} alt="" />
+//                         <img src={star} alt="" />
+//                         <img src={star} alt="" />
+//                         <img src={star} alt="" />
+//                     </div>
+//                     <h4>${shirt.price}</h4>
+//                 </div>
+//                 <Link onClick={() => addItemToCart(shirt)}><img className="shopping" src={cart} alt="" /></Link>
+//             </div>
+//         </Link>
+//     })
+// }
 
-</div> */}
+
+
+// import React, { useContext, useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import { v4 as uuidv4 } from 'uuid';
+// import "../cssfolder/Productos.css";
+// import star from "../icons/staryellow.png";
+// import cart from "../icons/shop-cart.svg";
+// import { CartContext } from '../Context/CartContext';
+// import Loading from './Loading';
+// import useSheets from '../useSheets';
+// import ButtonCategories from './ButtonCategories'; // Importa ButtonCategories
+
+// const Productos = ({ routeCategory }) => {
+//     const { addItemToCart } = useContext(CartContext);
+//     const { data, loading, error } = useSheets(
+//         'API_KEY',
+//         'SHEET_ID',
+//         'Class Data!A2:F'
+//     );
+
+//     const [filter, setFilter] = useState(''); // Estado para el filtro
+
+//     // Asignar IDs únicos a cada producto
+//     const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
+
+//     // Filtrar productos según el filtro seleccionado
+//     const filteredProducts = productosConId.filter(product => {
+//         if (filter === '') return true; // Mostrar todos los productos si no hay filtro
+//         return product.category === filter; // Filtrar por categoría
+//     });
+
+//     return (
+//         <div className="shirts-container">
+//             <ButtonCategories setFilter={setFilter} /> {/* Incluye ButtonCategories */}
+
+//             <div className="Pro-Container">
+//                 {
+//                     filteredProducts.map((shirt, i) => (
+//                         <Link key={i} to={`/${shirt.marca}/${shirt.id}`}>
+//                             <div key={i} className="pro">
+//                                 <img src={shirt.img} alt={shirt.name} />
+//                                 <div className="des">
+//                                     <span>{shirt.marca}</span>
+//                                     <span>{shirt.capacidad}</span>
+//                                     <h5>{shirt.name}</h5>
+//                                     <div className="star">
+//                                         <img src={star} alt="" />
+//                                         <img src={star} alt="" />
+//                                         <img src={star} alt="" />
+//                                         <img src={star} alt="" />
+//                                         <img src={star} alt="" />
+//                                     </div>
+//                                     <h4>${shirt.price}</h4>
+//                                 </div>
+//                                 <Link onClick={() => addItemToCart(shirt)}>
+//                                     <img className="shopping" src={cart} alt="" />
+//                                 </Link>
+//                             </div>
+//                         </Link>
+//                     ))
+//                 }
+//             </div>
+
+//             {loading && <Loading />}
+//         </div>
+//     );
+// }
+
+// export default Productos;
+// // 

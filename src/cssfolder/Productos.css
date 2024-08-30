@@ -30,7 +30,7 @@
 }
 
 .shirts-container .Pro-Container {
-    width: 100%;
+    width: 80%;
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -42,9 +42,12 @@
 }
 
 .shirts-container .pro {
-    /* width: 23%; */
-    width: 250px;
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    width: 180px;
+    height: 300px;
     padding: 10px 12px;
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -61,12 +64,13 @@
 }
 
 .shirts-container .pro img {
-    width: 245px;
-    height: 260px;
+    width: 90%;
+    height: 174px;
     border-radius: 20px;
 }
 
 .shirts-container .pro .des {
+    width: 100%;
     text-align: start;
     padding: 10px 0;
 }
@@ -88,7 +92,7 @@
 }
 
 .shirts-container .pro .des h4 {
-    margin-top: 20px;
+    margin: 0;
     font-size: 15px;
     font-weight: 700;
     color: #088178;
@@ -110,9 +114,19 @@
 }
 
 @media (max-width: 600px) {
+
+    .shirts-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
     .shirts-container .Pro-Container {
         justify-content: center;
         gap: 15px;
+        width: 100%;
     }
 
     .Banner-arabe,
@@ -152,11 +166,11 @@
     .shirts-container .pro .des h5 {
         font-size: 13px;
         font-weight: 600;
-        margin: 5px 0 5px 0;
+        margin: 5px 0 0 0;
     }
 
     .shirts-container .pro .des h4 {
-        margin: 7px 0 0 5px;
+        margin: 0 0 0 5px;
         font-size: 13px;
     }
 

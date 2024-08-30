@@ -1,18 +1,17 @@
-import React from 'react'
+import React from 'react';
 import "../cssfolder/ButtonCategories.css";
-import { Link } from "react-router-dom";
 
-const ButtonCategories = () => {
+const ButtonCategories = ({ setFilter }) => {
     return (
         <div className="shirts-section1">
-            <h2>Categorias</h2>
             <div className="Button-category">
-                <Link to={`/productos/arabe`}><button>Árabe</button></Link>
-                <Link to={`/productos/disenador`}><button>Diseñador</button></Link>
-                <Link to={`/productos/nicho`}><button>Nicho</button></Link>
+                <button onClick={() => setFilter('')}>Mostrar Todos</button> {/* Botón para mostrar todos */}
+                <button onClick={() => setFilter('Cerveza')}>Cervezas</button>
+                <button onClick={() => setFilter('Ron')}>Ron</button>
+                <button onClick={() => setFilter('Aguardiente')}>Aguardiente</button>
             </div>
         </div>
-    )
+    );
 }
 
-export default ButtonCategories
+export default ButtonCategories;

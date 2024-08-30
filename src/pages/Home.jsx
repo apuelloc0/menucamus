@@ -1,6 +1,6 @@
 import "../cssfolder/Home.css";
-import ButtonCategories from "../components/ButtonCategories";
-import ProductosHome from "../components/ProductosHome";
+// import ButtonCategories from "../components/ButtonCategories";
+import Productos from "../components/Productos";
 
 const Home = () => {
 
@@ -9,23 +9,23 @@ const Home = () => {
     return (
         <div className='Home'>
             <div className="Home hero">
-                <div className="Hero-images"> </div>
-                <div className="Hero-info">
+                {/* <div className="Hero-images"> </div> */}
+                {/* <div className="Hero-info">
                     <h4>Trade-in-offer</h4>
                     <h2>Perfumería 100% original</h2>
                     <h1>On all products</h1>
                     <p>Envíos gratis a todo el país</p>
-                </div>
+                </div> */}
             </div>
 
-            <ButtonCategories />
+            {/* <ButtonCategories /> */}
 
-            <ProductosHome />
+            <Productos />
 
             <div className="Home banner section-m1">
-                <h4>Repair Services</h4>
+                {/* <h4>Repair Services</h4>
                 <h2>Up to <span>70% Off</span> - All t-Shirts & Accessories</h2>
-                <button class="normal">Explore More</button>
+                <button class="normal">Explore More</button> */}
             </div>
 
             <div className="Home sm-banner section-p1">

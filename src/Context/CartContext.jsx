@@ -22,24 +22,27 @@ const CartProvider = ({ children }) => {
         // cada vez que se modificque el carrito, setée el localstorage,lo pasamos en string porque solo se puede en string
     }, [cartItems])
 
+    // --------------ADD-----------------
+
     const addItemToCart = (product) => {
-        const inCart = cartItems.find(
-            (productsInCart) => productsInCart.id === product.id
-        );
+        console.log("Producto a agregar:", product);
+        const inCart = cartItems.find(item => item.id === product.id);
+        console.log("Producto en carrito:", inCart);
 
         if (inCart) {
-            setCartItems(
-                cartItems.map((productInCart) => {
-                    if (productInCart.id === product.id) {
-                        return { ...inCart, amount: inCart.amount + 1 }
-                    } else return productInCart
-                })
-            )
+            const updatedCart = cartItems.map(item =>
+                item.id === product.id ? { ...item, amount: item.amount + 1 } : item
+            );
+            console.log("Carrito actualizado:", updatedCart);
+            setCartItems(updatedCart);
         } else {
-            setCartItems([...cartItems, { ...product, amount: 1 }])
+            const newCart = [...cartItems, { ...product, amount: 1 }];
+            console.log("Nuevo carrito:", newCart);
+            setCartItems(newCart);
         }
+    };
 
-    }
+
 
     // ------------DELETE-------------------
 

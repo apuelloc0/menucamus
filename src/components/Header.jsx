@@ -24,7 +24,7 @@ const Header = () => {
             <div className='ul-container'>
                 <ul className="navbar">
 
-                    <li><Link className="active" to="/">Home</Link></li>
+                    {/* <li><Link className="active" to="/">Home</Link></li> */}
 
                     <li className={!cartOpen ? "handbag-close" : "handbag"}>
                         <div className='buttonCartContainer'>
