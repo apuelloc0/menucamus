@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Whatsapp = () => {
     return (
-        <Link to="https://wa.link/rhbfsl">
+        <Link to="https://wa.link/0gz26y">
             <div className="Whatsapp-button">
                 <img src={whatsapp} alt="" />
             </div>
