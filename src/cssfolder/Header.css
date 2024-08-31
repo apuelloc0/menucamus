@@ -241,6 +241,10 @@
         right: 20px;
     }
 
+    .Header-cart .Overlay-visible {
+        height: 100vh;
+    }
+
     .productsNumber {
         position: absolute;
         height: 15px;
