@@ -12,6 +12,8 @@ import ButtonCategories from './ButtonCategories'; // Importa ButtonCategories
 const Productos = ({ routeCategory }) => {
     const { addItemToCart } = useContext(CartContext);
     const [filter, setFilter] = useState(''); // Estado para el filtro
+    const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
+    const itemsPerPage = 30; // Número de productos por página
 
     const { data, loading, error } = useSheets(
         'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
@@ -23,13 +25,24 @@ const Productos = ({ routeCategory }) => {
     // Asignar IDs únicos a cada producto
     const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
 
+    // Calcular los productos a mostrar en la página actual
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = productosConId.slice(indexOfFirstItem, indexOfLastItem);
+
+    // Calcular el número total de páginas
+    const totalPages = Math.ceil(productosConId.length / itemsPerPage);
+
+    // Función para cambiar de página
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
     return (
         <div className="shirts-container">
             <ButtonCategories setFilter={setFilter} /> {/* Incluye ButtonCategories */}
 
             <div className="Pro-Container">
                 {
-                    productosConId.map((shirt, i) => (
+                    currentItems.map((shirt, i) => (
                         <Link key={i} to={""}>
                             <div key={i} className="pro">
                                 <img src={shirt.img} alt={shirt.name} />
@@ -56,6 +69,15 @@ const Productos = ({ routeCategory }) => {
             </div>
 
             {loading && <Loading />}
+
+            {/* Botones de paginación */}
+            <div className="pagination">
+                {[...Array(totalPages)].map((_, i) => (
+                    <button key={i} onClick={() => paginate(i + 1)} className={currentPage === i + 1 ? 'active' : ''}>
+                        {i + 1}
+                    </button>
+                ))}
+            </div>
         </div>
     );
 }
@@ -65,36 +87,7 @@ export default Productos;
 
 
 
-// const { data, loading, error } = useSheets(
-//     'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
-//     '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
-//     'Class Data!A2:F'
-// );
 
-
-// {
-//     data.map((shirt, i) => {
-//         return <Link key={i} to={`/${shirt.marca}/${shirt.id}`}>
-//             <div key={i} className="pro">
-//                 <img src={shirt.img} alt={shirt.name} />
-//                 <div className="des">
-//                     <span>{shirt.marca}</span>
-//                     <span>{shirt.capacidad}</span>
-//                     <h5>{shirt.name}</h5>
-//                     <div className="star">
-//                         <img src={star} alt="" />
-//                         <img src={star} alt="" />
-//                         <img src={star} alt="" />
-//                         <img src={star} alt="" />
-//                         <img src={star} alt="" />
-//                     </div>
-//                     <h4>${shirt.price}</h4>
-//                 </div>
-//                 <Link onClick={() => addItemToCart(shirt)}><img className="shopping" src={cart} alt="" /></Link>
-//             </div>
-//         </Link>
-//     })
-// }
 
 
 
@@ -111,22 +104,17 @@ export default Productos;
 
 // const Productos = ({ routeCategory }) => {
 //     const { addItemToCart } = useContext(CartContext);
-//     const { data, loading, error } = useSheets(
-//         'API_KEY',
-//         'SHEET_ID',
-//         'Class Data!A2:F'
-//     );
-
 //     const [filter, setFilter] = useState(''); // Estado para el filtro
+
+//     const { data, loading, error } = useSheets(
+//         'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
+//         '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
+//         'Class Data!A2:F',
+//         filter // Pasar el filtro al custom hook
+//     );
 
 //     // Asignar IDs únicos a cada producto
 //     const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
-
-//     // Filtrar productos según el filtro seleccionado
-//     const filteredProducts = productosConId.filter(product => {
-//         if (filter === '') return true; // Mostrar todos los productos si no hay filtro
-//         return product.category === filter; // Filtrar por categoría
-//     });
 
 //     return (
 //         <div className="shirts-container">
@@ -134,8 +122,8 @@ export default Productos;
 
 //             <div className="Pro-Container">
 //                 {
-//                     filteredProducts.map((shirt, i) => (
-//                         <Link key={i} to={`/${shirt.marca}/${shirt.id}`}>
+//                     productosConId.map((shirt, i) => (
+//                         <Link key={i} to={""}>
 //                             <div key={i} className="pro">
 //                                 <img src={shirt.img} alt={shirt.name} />
 //                                 <div className="des">
@@ -166,4 +154,4 @@ export default Productos;
 // }
 
 // export default Productos;
-// // 
+
