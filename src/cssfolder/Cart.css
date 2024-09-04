@@ -23,6 +23,9 @@
 
 .cart {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     top: 0;
     right: -400px;
     /* Ajusta este valor para que se deslice fuera de la vista */

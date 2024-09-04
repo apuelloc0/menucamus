@@ -1,5 +1,6 @@
 .Home {
     max-width: 100%;
+    margin-top: 90px;
 }
 
 .Home .hero {
@@ -361,7 +362,8 @@
         height: 250px;
         padding: 0;
         background-position: center;
-        background-size: cover
+        background-size: cover;
+        margin-top: 92px;
     }
 
     .Hero-images {

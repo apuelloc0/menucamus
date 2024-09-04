@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { CartContext } from '../Context/CartContext';
 import "../cssfolder/Header.css";
 import cartIcon from "../icons/shopping.svg";
-import logo from "../icons/logoBlessed.png"; // Asegúrate de importar el logo
+import logo from "../icons/logonissysin.webp"; // Asegúrate de importar el logo
 import Cart from './Cart';
 
 const Header = () => {

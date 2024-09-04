@@ -1,6 +1,156 @@
 .shirts-section1 {
     text-align: center;
     width: 100%;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centra el contenedor de los botones */
+    margin-top: 50px;
+}
+
+.Button-category {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    scroll-behavior: smooth;
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+    /* Reduce el espacio entre los elementos */
+}
+
+.category-item {
+    text-align: center;
+    cursor: pointer;
+    flex: 0 0 80px;
+    /* Ancho de 80px */
+    /* height: 80px; */
+    /* Alto de 80px */
+    margin: 0 5px;
+    /* Reduce el margen entre los elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-item img {
+    width: 100%;
+    /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    border-radius: 100%;
+    /* Añade un poco de estilo */
+}
+
+.category-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    /* Evita que el texto se corte */
+    overflow: hidden;
+    /* Oculta el desbordamiento del texto */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos si el texto es demasiado largo */
+}
+
+.scroll-button {
+    background: none;
+    color: #bfbfbf;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    /* Aumenta el tamaño de las flechas */
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.scroll-button:hover {
+    color: #065a5a;
+}
+
+@media (max-width: 600px) {
+    .shirts-section1 {
+        width: 100%;
+        height: 150px;
+        margin: 25px 0 0 0;
+        justify-content: space-around;
+    }
+
+    .Button-category {
+        gap: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        /* Permite el desplazamiento táctil en móviles */
+        -webkit-overflow-scrolling: touch;
+        /* Suaviza el desplazamiento en iOS */
+        scrollbar-width: none;
+        /* Oculta la barra de desplazamiento en Firefox */
+    }
+
+    .Button-category::-webkit-scrollbar {
+        display: none;
+        /* Oculta la barra de desplazamiento en Chrome, Safari y Opera */
+    }
+
+    .category-item {
+        width: 80px;
+        /* Ancho de 80px */
+        height: 100%;
+        /* Alto de 80px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .category-item img {
+        width: 80%;
+        /* Ajusta el tamaño según sea necesario */
+    }
+
+    .category-item p {
+        font-size: 13px;
+        white-space: nowrap;
+        /* Evita que el texto se corte */
+        overflow: hidden;
+        /* Oculta el desbordamiento del texto */
+        text-overflow: ellipsis;
+        /* Añade puntos suspensivos si el texto es demasiado largo */
+    }
+}
+
+@media (min-width: 601px) {
+    .scroll-button {
+        display: none;
+        /* Oculta las flechas en escritorio */
+    }
+
+    .Button-category {
+        overflow: visible;
+        /* Muestra todos los elementos en escritorio */
+    }
+}
+
+
+
+
+
+
+
+
+/* -------CSS REEMPLAZO------- */
+
+
+/* .shirts-section1 {
+    text-align: center;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +190,7 @@
     .shirts-section1 {
         width: 100%;
         height: 150px;
-        margin: 30px 0 20px 0;
+        margin: 0;
         justify-content: space-around;
     }
 
@@ -64,4 +214,4 @@
         font-family: "Ubuntu", sans-serif;
 
     }
-}
+} */
