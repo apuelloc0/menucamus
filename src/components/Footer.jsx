@@ -1,6 +1,6 @@
 import React from 'react'
 import "../cssfolder/Footer.css";
-import logo from "../icons/logoBlessed.png";
+import logo from "../icons/logonissysin.webp";
 import { Link } from 'react-router-dom';
 import instagram from "../icons/instaicon.svg";
 import facebook from "../icons/facebook.svg";

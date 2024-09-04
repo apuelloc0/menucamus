@@ -40,7 +40,7 @@
 
 .Footer-logo img {
     width: 180px;
-    height: 55px;
+    height: 140px;
 }
 
 .Footer-categories,
@@ -93,6 +93,11 @@
 
     .Footer-top .Footer-logo {
         padding-top: 20px;
+    }
+
+    .Footer-logo img {
+        width: 85px;
+        height: 75px;
     }
 
     .Footer-top div {
