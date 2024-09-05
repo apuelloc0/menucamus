@@ -1,31 +1,33 @@
 import "../cssfolder/Home.css";
-// import ButtonCategories from "../components/ButtonCategories";
 import Productos from "../components/Productos";
+import SliderContain from "../components/SliderContain";
 
 const Home = () => {
 
-    // const { arabe, nicho, diseñador } = products
-
     return (
         <div className='Home'>
-            <div className="Home hero">
-                {/* <div className="Hero-images"> </div> */}
-                {/* <div className="Hero-info">
-                    <h4>Trade-in-offer</h4>
-                    <h2>Perfumería 100% original</h2>
-                    <h1>On all products</h1>
-                    <p>Envíos gratis a todo el país</p>
-                </div> */}
-            </div>
 
-            {/* <ButtonCategories /> */}
+            <div class="Home-hero">
+                <div class="slider-container">
+                    <SliderContain />
+                </div>
+
+                <div class="cta-container">
+                    <SliderContain />
+
+                    {/* <h2>Sign In for the Best Experience</h2>
+                    <ul>
+                        <li>Collect points & earn rewards</li>
+                        <li>Get personalized recommendations</li>
+                        <li>Checkout faster and more easily</li>
+                    </ul> */}
+
+                </div>
+            </div>
 
             <Productos />
 
             <div className="Home banner section-m1">
-                {/* <h4>Repair Services</h4>
-                <h2>Up to <span>70% Off</span> - All t-Shirts & Accessories</h2>
-                <button class="normal">Explore More</button> */}
             </div>
 
             <div className="Home sm-banner section-p1">
@@ -60,58 +62,6 @@ const Home = () => {
                     <h3>New Trendy Prints</h3>
                 </div>
             </div>
-
-
-
-            {/* <div class="Home footer section-p1">
-                <div class="col">
-
-                    <h4>Contact</h4>
-                    <p><strong>Address: </strong> 562 Wellington Roat, Street 32, San Francisco</p>
-                    <p><strong>Phone: </strong> +01 2222 555 /(+91) 01 2222 4444</p>
-                    <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
-
-                    <div class="follow">
-                        <h4>Follow us</h4>
-                        <div class="icon">
-                            <img src="./img/facebook-square-logo-24.png" alt="" />
-                            <img src="./img/instagram-alt-logo-24.png" alt="" />
-                            <img src="img/twitter-logo-24.png" alt="" />
-                            <img src="./img/youtube-logo-24.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <h4>About</h4>
-                    <a href="#">About us</a>
-                    <a href="#">Delivery Information</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-
-                <div class="col">
-                    <h4>My Account</h4>
-                    <a href="#">Sign In</a>
-                    <a href="#">View Cart</a>
-                    <a href="#">My Wishlist</a>
-                    <a href="#">Track My Order</a>
-                    <a href="#">Help</a>
-                </div>
-
-                <div class="col install">
-                    <h4>Install App</h4>
-                    <p>From App Store or Google Play</p>
-                    <div class="row">
-                        <img src="./img/pay/app.jpg" alt="" />
-                        <img src="./img/pay/play.jpg" alt="" />
-                    </div>
-                    <p>Secured Payment Gateways</p>
-                    <img src="./img/pay/pay.png" alt="" />
-                </div>
-
-            </div> */}
         </div>
     )
 }

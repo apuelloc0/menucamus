@@ -29,6 +29,7 @@
 
 .Logo {
     height: 80px;
+    width: 90px;
     margin-left: 40px;
 }
 
@@ -192,7 +193,8 @@
     }
 
     .Logo {
-        height: 65px;
+        height: 68px;
+        width: 88px;
         margin-left: 25px;
     }
 

@@ -1,58 +1,68 @@
 .Home {
     max-width: 100%;
-    margin-top: 90px;
+    margin-top: 135px;
 }
 
-.Home .hero {
-    max-width: 100%;
-    height: 40vh;
-    /* background-image: url("../icons/hero4.png"); */
-    background-position: top 25% right 0;
-    background-size: contain;
-    padding: 0 50px;
+.Home-hero {
+    height: 350px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    /* flex-direction: column; */
+    justify-content: center;
     align-items: center;
-    /* background-attachment: fixed; */
-    background-image: url("../icons/bannerhambur.webp");
-    /* gap: 30px; */
+    gap: 30px;
+    /* margin-top: 200px; */
+    /* background-color: #d4d3d1; */
 }
 
-/* .Hero-images {
-    background-image: url("../icons/CaballeroPerfumes1.webp");
-    width: 50%;
+.slider-container {
+    width: 35%;
     height: 80%;
-    background-size: cover;
-} */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
 
-.Hero.info {
-    width: 50%;
+.cta-container {
+    width: 45%;
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-.hero h4 {
-    padding-bottom: 15px;
+.cta-container h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
 }
 
-.hero h1 {
-    color: #088178;
+.cta-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
-.hero button {
-    background-color: transparent;
-    color: #088178;
-    border: 0;
-    padding: 14px 80px 14px 65px;
-    background-repeat: no-repeat;
+.cta-container ul li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.cta-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
-    margin-top: 15px;
+    border-radius: 5px;
 }
+
+.cta-container button:hover {
+    background-color: #0056b3;
+}
+
 
 /* ----Shirts------ */
 
@@ -357,13 +367,22 @@
 /* ------.footer--------- */
 
 @media (max-width: 600px) {
-    .Home .hero {
-        width: 100%;
+    .Home-hero {
+        /* width: 100%;
         height: 250px;
         padding: 0;
         background-position: center;
         background-size: cover;
-        margin-top: 92px;
+        margin-top: 92px; */
+        flex-direction: column;
+    }
+
+    .slider-container {
+        width: 90%;
+    }
+
+    .cta-container {
+        width: 90%;
     }
 
     .Hero-images {
