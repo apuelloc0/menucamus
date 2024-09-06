@@ -1,3 +1,4 @@
+// Productos.jsx
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -7,38 +8,36 @@ import cart from "../icons/shop-cart.svg";
 import { CartContext } from '../Context/CartContext';
 import Loading from './Loading';
 import useSheets from '../useSheets';
-import ButtonCategories from './ButtonCategories'; // Importa ButtonCategories
+import ButtonCategories from './ButtonCategories';
+import SearchBar from './SearchBar';
 
 const Productos = ({ routeCategory }) => {
     const { addItemToCart } = useContext(CartContext);
-    const [filter, setFilter] = useState(''); // Estado para el filtro
-    const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
-    const itemsPerPage = 30; // Número de productos por página
+    const [filter, setFilter] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 30;
 
     const { data, loading, error } = useSheets(
         'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
         '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
         'Class Data!A2:F',
-        filter // Pasar el filtro al custom hook
+        filter
     );
 
-    // Asignar IDs únicos a cada producto
     const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
 
-    // Calcular los productos a mostrar en la página actual
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = productosConId.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Calcular el número total de páginas
     const totalPages = Math.ceil(productosConId.length / itemsPerPage);
 
-    // Función para cambiar de página
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <div className="shirts-container">
-            <ButtonCategories setFilter={setFilter} /> {/* Incluye ButtonCategories */}
+            <ButtonCategories setFilter={setFilter} />
+            <SearchBar setFilter={setFilter} />
 
             <div className="Pro-Container">
                 {
@@ -70,7 +69,6 @@ const Productos = ({ routeCategory }) => {
 
             {loading && <Loading />}
 
-            {/* Botones de paginación */}
             <div className="pagination">
                 {[...Array(totalPages)].map((_, i) => (
                     <button key={i} onClick={() => paginate(i + 1)} className={currentPage === i + 1 ? 'active' : ''}>

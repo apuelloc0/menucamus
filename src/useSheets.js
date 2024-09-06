@@ -44,7 +44,9 @@ const useGoogleSheets = (apiKey, spreadsheetId, range, filter) => {
                     capacidad: row[4],
                 }));
                 // Filtrar los datos según el filtro proporcionado
-                const filteredData = mappedData.filter(product => product.name.includes(filter));
+                const filteredData = mappedData.filter(product => 
+                    product.name.toLowerCase().includes(filter.toLowerCase())
+                );
                 setData(filteredData);
             } catch (err) {
                 setError(err);
