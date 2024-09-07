@@ -18,8 +18,8 @@ const ItemCart = ({ item }) => {
                     <div className='cartItem-buttons'>
                         <button onClick={() => {
                             deleteItemToCart(item)
-                        }}>-</button>
-                        <button onClick={() => addItemToCart(item)}>+</button>
+                        }}>Eliminar</button>
+                        <button onClick={() => addItemToCart(item)}>Agregar</button>
                     </div>
                 </div>
                 <div className='cartItem-right'>

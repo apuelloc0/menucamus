@@ -1,3 +1,8 @@
+/* Cart.css */
+body.modal-open {
+    overflow: hidden;
+}
+
 .cartContainer {
     width: 100vw;
     height: 60px;
@@ -20,7 +25,6 @@
     z-index: 1000;
 }
 
-
 .cart {
     position: fixed;
     display: flex;
@@ -32,7 +36,7 @@
     width: 400px;
     height: 100vh;
     background-color: #ffffff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
 }
@@ -40,7 +44,6 @@
 .cart.open {
     right: 0;
 }
-
 
 .Close-container {
     width: 20px;
@@ -150,8 +153,6 @@
     margin-top: 5px;
 }
 
-
-
 ::-webkit-scrollbar {
     -webkit-appearance: none;
 }
@@ -166,7 +167,6 @@
 }
 
 @media (max-width: 600px) {
-
     .cart {
         width: 85%;
         height: 100vh;
@@ -224,25 +224,6 @@
 
     .Ordering-total {
         justify-content: space-between;
-    }
-
-    .Ordering-total p {
-        margin: 0;
-        padding: 0 24px 0 24px;
-    }
-
-    .Ordering button {
-        width: 80%;
-        height: 36px;
-    }
-
-    .Ordering button a {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-weight: 600;
-        font-family: "Ubuntu", sans-serif;
-        letter-spacing: 1px;
     }
 }
 

@@ -28,9 +28,14 @@
     gap: 20px;
 }
 
-.Footer-top .Social-media img {
+.Social-media .icon {
     width: 30px;
+    transition: fill 1s ease;
 }
+
+/* .Social-media:hover .icon {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+} */
 
 .Footer-top .Footer-logo {
     display: flex;

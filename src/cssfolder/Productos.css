@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-.Banner-arabe,
+/* .Banner-arabe,
 .Banner-disenador,
 .Banner-nicho {
     width: 100%;
@@ -14,10 +14,9 @@
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* background-position: center; */
-}
+} */
 
-.Banner-arabe {
+/* .Banner-arabe {
     background-image: url("../icons/bannerProductos.webp");
 }
 
@@ -27,10 +26,11 @@
 
 .Banner-nicho {
     background-image: url("../icons/bannerNicho.webp");
-}
+} */
 
 .shirts-container .Pro-Container {
     width: 80%;
+    /* min-height: 100vh; */
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -98,9 +98,10 @@
     color: #088178;
 }
 
+
 .shirts-container .pro a .shopping {
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
     padding: 5px 5px;
     line-height: 40px;
     border-radius: 50px;
@@ -111,39 +112,63 @@
     position: absolute;
     bottom: 20px;
     right: 15px;
+    transition: filter 0.4s ease;
+}
+
+.a-contain:hover .shopping {
+    filter: invert(100%);
 }
 
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    width: 100%;
-}
-
-.pagination button {
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 16px;
+    width: 30%;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    font-size: 13px;
     font-weight: 600;
-    transition: 0.3s ease;
 }
 
-.pagination button:hover {
-    background-color: #ffa600;
-
-}
-
-.pagination button.active {
-    background-color: #ffa600;
-    color: black;
-}
-
-.pagination button:hover:not(.active) {
+.pagination li {
     background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.pagination li:hover {
+    background-color: #b7b7b7
+}
+
+.pagination li.active {
+    background-color: darkorange;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page-link:hover {
+    background-color: #f1f1f1;
+}
+
+.active .page-link {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
 }
 
 @media (max-width: 600px) {
@@ -216,6 +241,11 @@
         height: 20px;
         bottom: 5px;
         right: 10px;
+    }
+
+    .pagination {
+        width: 100%;
+        margin-bottom: 0;
     }
 }
 

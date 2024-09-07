@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../Context/CartContext';
 import "../cssfolder/Cart.css";
 import close from "../icons/x.png";
@@ -10,9 +10,14 @@ const Cart = ({ cartOpen, setCartOpen }) => {
 
     const total = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
 
+    const toggleCart = () => {
+        setCartOpen(!cartOpen);
+        document.body.style.overflow = cartOpen ? 'auto' : 'hidden';
+    };
+
     return (
         <div className={cartOpen ? "cart open" : "cart"}>
-            <img className='Close-cart' onClick={() => setCartOpen(false)} src={close} alt="close Icon" />
+            <img className='Close-cart' onClick={toggleCart} src={close} alt="close Icon" />
             <h2 className='Title-cart'>Tu carrito</h2>
             {cartItems.length === 0 ? <p className='cart-vacio'>Tu carrito está vacío.</p> : (
                 <div className='productsContainer'>
@@ -34,6 +39,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
 };
 
 export default Cart;
+
 
 
 

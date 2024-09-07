@@ -1,7 +1,7 @@
-// Productos.jsx
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import ReactPaginate from 'react-paginate';
 import "../cssfolder/Productos.css";
 import star from "../icons/staryellow.png";
 import cart from "../icons/shop-cart.svg";
@@ -14,8 +14,9 @@ import SearchBar from './SearchBar';
 const Productos = ({ routeCategory }) => {
     const { addItemToCart } = useContext(CartContext);
     const [filter, setFilter] = useState('');
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 30;
+    const [currentPage, setCurrentPage] = useState(0);
+    const [itemsPerPage] = useState(30); // Fijamos la cantidad de items por página
+    const containerRef = useRef(null);
 
     const { data, loading, error } = useSheets(
         'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
@@ -24,24 +25,29 @@ const Productos = ({ routeCategory }) => {
         filter
     );
 
-    const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
+    const productosConId = data ? data.map(product => ({ ...product, id: uuidv4() })) : [];
 
-    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = productosConId.slice(indexOfFirstItem, indexOfLastItem);
 
     const totalPages = Math.ceil(productosConId.length / itemsPerPage);
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const handlePageClick = (event) => {
+        setCurrentPage(event.selected);
+        if (containerRef.current) {
+            containerRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className="shirts-container">
             <ButtonCategories setFilter={setFilter} />
             <SearchBar setFilter={setFilter} />
 
-            <div className="Pro-Container">
+            <div ref={containerRef} className="Pro-Container">
                 {
-                    currentItems.map((shirt, i) => (
+                    loading ? <Loading /> : currentItems.map((shirt, i) => (
                         <Link key={i} to={""}>
                             <div key={i} className="pro">
                                 <img src={shirt.img} alt={shirt.name} />
@@ -58,8 +64,8 @@ const Productos = ({ routeCategory }) => {
                                     </div>
                                     <h4>${shirt.price}</h4>
                                 </div>
-                                <Link onClick={() => addItemToCart(shirt)}>
-                                    <img className="shopping" src={cart} alt="" />
+                                <Link className="a-contain" onClick={() => addItemToCart(shirt)}>
+                                    <img className="shopping" src={cart} alt="Shopping Cart" />
                                 </Link>
                             </div>
                         </Link>
@@ -67,20 +73,23 @@ const Productos = ({ routeCategory }) => {
                 }
             </div>
 
-            {loading && <Loading />}
-
-            <div className="pagination">
-                {[...Array(totalPages)].map((_, i) => (
-                    <button key={i} onClick={() => paginate(i + 1)} className={currentPage === i + 1 ? 'active' : ''}>
-                        {i + 1}
-                    </button>
-                ))}
-            </div>
+            <ReactPaginate
+                previousLabel={'<'}
+                nextLabel={'>'}
+                breakLabel={'...'}
+                pageCount={totalPages}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={'pagination'}
+                activeClassName={'active'}
+            />
         </div>
     );
 }
 
 export default Productos;
+
 
 
 

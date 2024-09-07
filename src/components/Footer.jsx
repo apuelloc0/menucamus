@@ -13,8 +13,8 @@ const Footer = () => {
                     <img src={logo} alt="logo-img" />
                 </div>
                 <div className="Social-media">
-                    <img src={instagram} alt="" />
-                    <img src={facebook} alt="" />
+                    <img className='icon' src={instagram} alt="" />
+                    <img className='icon' src={facebook} alt="" />
                 </div>
                 <div className="Footer-Contact">
                     <span>Contacto</span>
