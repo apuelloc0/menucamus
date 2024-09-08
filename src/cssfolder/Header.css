@@ -3,9 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    /* Color de fondo amarillo mostaza */
-    /* padding: 10px 20px; */
-    height: 120px;
+    height: 100px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -16,22 +14,26 @@
 }
 
 .Header.shrink {
-    height: 100px;
+    height: 80px;
 }
 
-.Header a {
+/* .Header a {
     width: 17%;
     height: 100%;
-}
+} */
 
 .LogoContainer {
-    flex: 1;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 35px;
 }
 
 .Logo {
     height: 80px;
     width: 90px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .PromoContainer {
@@ -95,10 +97,18 @@
 }
 
 .buttonCartContainer {
+    width: 70%;
     position: relative;
-    flex: 1;
     display: flex;
     justify-content: flex-end;
+    gap: 20px;
+}
+
+
+.cta-button p {
+    margin: 0;
+    font-weight: 600;
+    color: white;
 }
 
 .buttonCart {
@@ -110,17 +120,15 @@
     border: 1px solid rgb(177, 177, 177);
     border-radius: 100px;
     cursor: pointer;
-    /* Asegura que el botón no esté pegado al borde */
 }
 
 .productsNumber {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -8px;
+    right: -7px;
     background-color: red;
     color: white;
     border-radius: 50%;
-    /* padding: 5px 10px; */
     font-size: 10px;
     height: 20px;
     width: 20px;
@@ -171,32 +179,67 @@
     display: none;
 }
 
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    /* Color de WhatsApp */
+    color: gray;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    gap: 10px;
+    transition: 0.4s ease;
+}
+
+.cta-button:hover {
+    background-color: #25D366;
+    /* color: white; */
+}
+
+
+.cta-button img {
+    margin: 0;
+}
+
+.whatsapp-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
 @media (max-width: 600px) {
     .Header {
         width: 100%;
-        height: 95px;
+        height: 90px;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .Header a {
-        width: 30%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    .Header.shrink {
+        height: 80px;
     }
 
-    .Header a .logo {
-        width: 85%;
-        height: 40px;
+    .LogoContainer {
+        margin-left: 0;
+        justify-content: center;
+        width: 32%;
     }
 
     .Logo {
-        height: 68px;
-        width: 88px;
-        margin-left: 25px;
+        height: 70px;
+        width: 82px;
     }
 
     .ul-container {
@@ -230,276 +273,26 @@
 
     .buttonCartContainer {
         position: relative;
+        gap: 15px;
+        width: 68%;
     }
 
     .buttonCart {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        padding: 1px;
         margin-right: 25px;
     }
 
-    .Header-cart img.Close-cart {
-        width: 25px;
-        height: 25px;
-        top: 25px;
-        right: 20px;
+    .cta-button {
+        background-color: #25D366;
+        padding: 10px 15px;
     }
 
-    .Header-cart .Overlay-visible {
-        height: 100vh;
+    .cta-button p {
+        display: none;
     }
 
-    .productsNumber {
-        top: -6px;
-        right: -10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* .Header {
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 80px;
-    background-color: #ffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    z-index: 999;
-    position: sticky;
-    top: 0;
-    left: 0;
-
-}
-
-.Header a {
-    width: 17%;
-    height: 100%;
-}
-
-.Header a .logo {
-    width: 100%;
-    height: 55px;
-}
-
-.Header .logo {
-    width: 50px;
-    height: 50px;
-}
-
-.ul-container {
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    height: 60px;
-    gap: 20px;
-    position: relative;
-}
-
-.navbar li {
-    width: 50%;
-    list-style: none;
-    text-decoration: none;
-}
-
-.navbar li.handbag {
-    margin-top: 0;
-}
-
-.navbar li.handbag-close {
-    position: relative;
-}
-
-.navbar li a {
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: #1a1a1a;
-    transition: 0.7s ease;
-}
-
-.navbar li a.active:hover {
-    color: #088178;
-}
-
-
-.buttonCartContainer {
-    cursor: pointer;
-}
-
-
-
-.Overlay {
-    position: none;
-    transition: 1s ease;
-}
-
-.Overlay-visible {
-    position: fixed;
-    background-color: #b1b1b15c;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-}
-
-.buttonCart {
-    border: 1px solid #2222;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-}
-
-.Header-cart {
-    display: block;
-}
-
-.Header-cart img.Close-cart {
-    position: fixed;
-    z-index: 1;
-    top: 38px;
-    right: 26px;
-}
-
-.productsNumber {
-    height: 20px;
-    width: 20px;
-    border-radius: 999px;
-    background-color: #fb3939;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0px;
-    right: 11px;
-}
-
-.cart-Close {
-    display: none;
-    right: -500px;
-}
-
-
-
-
-.mobile {
-    display: none;
-    align-items: center;
-}
-
-.navbar .close {
-    display: none;
-}
-
-
-
-@media (max-width: 600px) {
-    .Header {
-        width: 100%;
-        height: 95px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .Header a {
-        width: 30%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .Header a .logo {
-        width: 85%;
-        height: 40px;
-    }
-
-    .ul-container {
-        width: 60%;
-    }
-
-    .navbar {
-        width: 100%;
+    .cta-button img {
         margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: flex-end;
-        gap: 0;
     }
+}
 
-    .navbar li {
-        width: 36%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar li a.active {
-        font-size: 15px;
-        color: #816208;
-        font-weight: 600;
-    }
-
-    .navbar li.handbag-close {
-        margin-top: 0;
-    }
-
-    .buttonCartContainer {
-        position: relative;
-    }
-
-    .buttonCart {
-        width: 50px;
-        height: 50px;
-    }
-
-    .Header-cart img.Close-cart {
-        width: 25px;
-        height: 25px;
-        top: 25px;
-        right: 20px;
-    }
-
-    .Header-cart .Overlay-visible {
-        height: 100vh;
-    }
-
-    .productsNumber {
-        position: absolute;
-        height: 15px;
-        width: 15px;
-        top: -2px;
-        right: 0;
-    }
-} */
+/* Estilos para el botón de llamada a la acción */

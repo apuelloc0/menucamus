@@ -15,8 +15,8 @@
 }
 
 .slider-container {
-    width: 35%;
-    height: 80%;
+    width: 85%;
+    height: 100%;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -254,7 +254,8 @@
 .banner3 {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .banner3 .banner-box {
@@ -373,6 +374,10 @@
 /* ------.footer--------- */
 
 @media (max-width: 600px) {
+    .Home {
+        margin-top: 100px;
+    }
+
     .Home-hero {
         /* width: 100%;
         height: 250px;
@@ -384,10 +389,12 @@
     }
 
     .slider-container {
-        width: 90%;
+        width: 95%;
+        height: 85%;
     }
 
     .cta-container {
+        display: none;
         width: 90%;
     }
 
@@ -466,6 +473,7 @@
         width: 100%;
         height: 300px;
         padding: 0;
+        margin-bottom: 10px;
     }
 
     .banner3 .banner-box2,

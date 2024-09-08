@@ -12,17 +12,17 @@ const Home = () => {
                     <SliderContain />
                 </div>
 
-                <div class="cta-container">
+                {/* <div class="cta-container">
                     <SliderContain />
 
-                    {/* <h2>Sign In for the Best Experience</h2>
+                    <h2>Sign In for the Best Experience</h2>
                     <ul>
                         <li>Collect points & earn rewards</li>
                         <li>Get personalized recommendations</li>
                         <li>Checkout faster and more easily</li>
-                    </ul> */}
+                    </ul>
 
-                </div>
+                </div> */}
             </div>
 
             <Productos />
