@@ -27,9 +27,9 @@
 }
 
 .Checkout-selection button {
-    background-color: #4CAF50;
+    background-color: white;
     border: none;
-    color: white;
+    color: #4CAF50;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -37,6 +37,7 @@
     font-size: 30px;
     margin: 4px 2px;
     cursor: pointer;
+    border: 3px solid #4CAF50;
     border-radius: 25px;
     transition: background-color 0.4s ease;
     height: 70%;
@@ -45,7 +46,8 @@
 }
 
 .Checkout-selection button:hover {
-    background-color: #07850d;
+    background-color: #4CAF50;
+    color: white;
 }
 
 .Checkout-info {
@@ -235,6 +237,16 @@ div:nth-child(2) .envio-option {
     .Checkout {
         width: 100%;
         margin-top: 110px;
+    }
+
+    .Checkout-selection {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .Checkout-selection button {
+        width: 80%;
     }
 
     .Checkout-info {
