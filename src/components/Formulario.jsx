@@ -82,7 +82,7 @@ const Formulario = () => {
                         onChange={(e) => setEntrega(e.target.value)}
                     >
                         <option value="tienda">Retiro en tienda</option>
-                        <option value="envio">Envío</option>
+                        <option value="envio">Domicilio</option>
                     </select>
                 </div>
                 <div className="form-group">
@@ -107,7 +107,13 @@ const Formulario = () => {
                         required
                     />
                 </div>
-                <button type="submit">Enviar a Whatsapp</button>
+                <div className='form-text'>
+                    <p>Sus datos personales se utilizarán unicamente para procesar su pedido, respaldar su experiencia en este sitio web.</p>
+                </div>
+                <div className='Button-wha'>
+                    <button className='Send-wha' type="submit">Enviar a Whatsapp</button>
+
+                </div>
             </form>
         </div>
     );

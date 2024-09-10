@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Checkout.css */
+
 .Checkout {
     width: 100%;
-    /* height: 600px; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -12,23 +16,95 @@
     background-image: url("../icons/addtocart.png");
 }
 
+.Checkout-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 400px;
+    align-items: center;
+    gap: 30px;
+}
+
+.Checkout-selection button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.4s ease;
+    height: 70%;
+    width: 40%;
+    font-weight: bold;
+}
+
+.Checkout-selection button:hover {
+    background-color: #07850d;
+}
+
 .Checkout-info {
-    width: 55%;
+    width: 90%;
+    /* height: 600px; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
 }
 
 .Checkout-products {
-    width: 45%;
+    width: 35%;
+    max-height: 620px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* align-items: center; */
-    /* border-left: 1px solid lightgray; */
+    /* box-shadow: -4px 8px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.Checkout-list {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.Checkout-title {
+    width: 100%;
+}
+
+.Checkout-title h2 {
+    font-size: 22px;
+    /* font-weight: 600; */
+    text-align: center;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500
+}
+
+.Checkout-subtitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Checkout-subtitle p.subtitle {
+    font-size: 15px;
+    font-weight: 800;
+    color: black;
+    margin: 15px;
 }
 
 .Checkout-total {
-    width: 90%;
+    width: 100%;
+    height: 20%;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 }
 
@@ -36,82 +112,155 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    height: 33%;
+    /* border-bottom: 1px solid #dfdfdf; */
 }
 
 .Checkout-total p.total {
-    padding: 0 50px 0 10px;
-    font-size: 25px;
+    margin: 0;
+    font-size: 14px;
     font-weight: 800;
+    padding: 10px 0 10px 10px;
     color: black;
 }
 
-.Checkout-total div:nth-child(1) p.total {
-    padding: 0 50px 0 10px;
-    font-size: 20px;
-    font-weight: 500;
-    color: black;
+.Checkout-total div p.total:nth-child(2) {
+    color: #07850d;
+    font-weight: 800;
 }
 
 .productsCheckout {
-    width: 90%;
+    width: 100%;
+    height: 56%;
     max-height: 600px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    background-color: white;
+    padding: 10px 0 10px 6px;
+    border-radius: 10px;
 }
 
 .cartItem-Checkout {
     width: 100%;
     display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 5px;
 }
 
 .Checkout-items {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .Checkout-items .Checkout-items-left {
+    width: 65%;
     display: flex;
     gap: 10px;
 }
 
 .Checkout-items-left img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
 }
 
 .Checkout-items-left p {
     color: #465b52;
     font-size: 14px;
+    font-weight: 600;
+}
+
+.Checkout-items-right {
+    width: 17%;
+}
+
+.right-container {
+    font-weight: 600;
+    color: #465b52;
+    padding-top: 3px;
+}
+
+.right-container p {
+    font-weight: 600;
+    margin-top: 3px;
+    color: #465b52;
+}
+
+div:nth-child(2) .envio-p {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+}
+
+div:nth-child(2) .envio-p p {
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+
+
+div:nth-child(2) .envio-option {
+    width: 70%;
+    height: 100%;
+}
+
+.envio-option .input-1,
+.envio-option .input-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envio-option .input-2 {
+    gap: 31px;
+}
+
+.envio-option .input-1 label,
+.envio-option .input-2 label {
+    margin-bottom: 0;
+}
+
+.envio-option .input-2 label span {
+    color: #07850d;
+    margin-left: 3px;
 }
 
 @media (max-width: 600px) {
     .Checkout {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-        margin-top: 20px;
+        width: 100%;
+        margin-top: 110px;
     }
 
     .Checkout-info {
-        width: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .Checkout-products {
-        width: 90%;
+        width: 80%;
+        padding: 20px;
         margin-top: 20px;
         display: flex;
-        justify-content: center;
+        /* justify-content: flex-start; */
         align-items: center;
+    }
+
+    .Checkout-list {
+        height: 10%;
     }
 
     .productsCheckout {
         width: 100%;
-        padding: 0;
+        min-height: 60%;
+        padding: 8px;
     }
 
     .Checkout-items-right .right-container {
@@ -120,17 +269,39 @@
 
     .Checkout-total {
         width: 100%;
+        height: 20%;
+    }
+
+    .Checkout-total div {
+        align-items: center;
+    }
+
+    div:nth-child(2) .envio-p {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    div:nth-child(2) .envio-p p {
+        font-size: 18px;
+    }
+
+    div:nth-child(2) .envio-option {
+        display: flex;
+        justify-content: center;
+    }
+
+    .envio-option .input-2 {
+        gap: 0;
     }
 
     .Checkout-total p.total {
-        padding: 0 20px 0 20px;
-        font-size: 21px;
+        padding: 0;
+        font-size: 18px;
     }
 
     .Checkout-total div:nth-child(1) p.total {
-        font-size: 17px;
-        padding: 0 20px 0 20px;
-
+        /* font-size: 17px; */
+        padding: 0;
     }
-
 }
