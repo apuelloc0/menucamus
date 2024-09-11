@@ -108,7 +108,7 @@ const Formulario = () => {
                     />
                 </div>
                 <div className='form-text'>
-                    <p>Sus datos personales se utilizarán unicamente para procesar su pedido, respaldar su experiencia en este sitio web.</p>
+                    <p>Sus datos personales se utilizarán unicamente para procesar su pedido y respaldar su experiencia en este sitio web.</p>
                 </div>
                 <div className='Button-wha'>
                     <button className='Send-wha' type="submit">Enviar a Whatsapp</button>
