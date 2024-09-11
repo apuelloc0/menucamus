@@ -32,13 +32,17 @@ const Cart = ({ cartOpen, setCartOpen }) => {
                     <p className='cart-total'>${total}</p>
                 </div>
                 <p>El costo de envío es totalmente GRATIS!</p>
-                <button><Link to="/checkout">Ir a Checkout</Link></button>
+                <button disabled={cartItems.length === 0}>
+                    <Link to="/checkout" className={cartItems.length === 0 ? 'disabled-link' : ''}>Ir a Checkout</Link>
+                </button>
             </div>
         </div>
     );
 };
 
 export default Cart;
+
+
 
 
 

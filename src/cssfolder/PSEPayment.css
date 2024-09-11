@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* PSEPayment.css */
+
+.PSEPayment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    width: 40%;
+    max-width: 500px;
+    /* margin: 0 auto; */
+}
+
+.PSEPayment h2 {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.PSEPayment div {
+    width: 80%;
+}
+
+.PSEPayment label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.PSEPayment select,
+.PSEPayment input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.PSEPayment button {
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    background-color: #28a745;
+    color: white;
+    transition: 0.4s ease;
+    height: 35px;
+    width: 85%;
+}
+
+.PSEPayment button:hover {
+    background-color: #0b7b25;
+    color: white;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .PSEPayment {
+        padding: 20px;
+        width: 80%;
+        margin: 30px 0 0 0;
+    }
+
+    .PSEPayment h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .PSEPayment div {
+        width: 95%;
+    }
+
+    .PSEPayment select,
+    .PSEPayment input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .PSEPayment button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}

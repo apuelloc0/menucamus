@@ -119,6 +119,15 @@ body.modal-open {
     color: #ffff;
 }
 
+.Ordering button:disabled {
+    background-color: #d3d3d3;
+    /* Color gris para indicar que está deshabilitado */
+    color: #a9a9a9;
+    /* Color de texto gris */
+    cursor: not-allowed;
+    /* Cambia el cursor para indicar que no es clicable */
+}
+
 .Ordering button a {
     color: black;
     text-decoration: none;
@@ -126,6 +135,17 @@ body.modal-open {
 
 .Ordering button a:hover {
     color: #ffffff;
+}
+
+.disabled-link {
+    pointer-events: none;
+    /* Desactiva los eventos de clic */
+    color: #a9a9a9;
+    /* Cambia el color para indicar que está deshabilitado */
+    cursor: not-allowed;
+    /* Cambia el cursor para indicar que no es clicable */
+    text-decoration: none;
+    /* Elimina el subrayado */
 }
 
 .Ordering-total {
