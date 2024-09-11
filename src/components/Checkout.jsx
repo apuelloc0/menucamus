@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import "../cssfolder/Checkout.css";
 import { CartContext } from '../Context/CartContext';
+import flechaiz from "../icons/flechaiz.svg";
 import Formulario from './Formulario';
 import PSEPayment from './PSEPayment';
 
@@ -22,6 +23,10 @@ const Checkout = () => {
         return subtotal;
     };
 
+    const handleBackClick = () => {
+        setSelectedOption(null);
+    };
+
     return (
         <div className='Checkout'>
             {!selectedOption && (
@@ -32,12 +37,16 @@ const Checkout = () => {
             )}
 
             {selectedOption && (
+
                 <div className="Checkout-info">
+                    <button className="back-button" onClick={handleBackClick}>
+                        <img src={flechaiz} alt="" />
+                    </button>
+
                     {selectedOption === 'whatsapp' && <Formulario />}
-                    {selectedOption === 'pse' && <PSEPayment />}
+                    {selectedOption === 'pse' && <PSEPayment total={calculateTotal} />}
 
                     <div className="Checkout-products">
-
                         <div className="Checkout-list">
                             <div className='Checkout-title'>
                                 <h2 className='title'>Tu Pedido</h2>
