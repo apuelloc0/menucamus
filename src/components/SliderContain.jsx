@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../cssfolder/SliderContain.css';
-import numero1 from "../icons/bannerfut.webp";
-import numero2 from "../icons/bannerviajes.webp";
-import numero3 from "../icons/bannerhambur.webp";
+import numero1 from "../icons/bannercoronitas.webp";
+import numero2 from "../icons/vino4.webp";
+import numero3 from "../icons/bannertrago.webp";
 
 const SliderContain = () => {
     const [currentSlide, setCurrentSlide] = useState(0);

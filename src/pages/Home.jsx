@@ -11,6 +11,9 @@ const Home = () => {
                 <div class="slider-container">
                     <SliderContain />
                 </div>
+                <div class="slider-container">
+                    <SliderContain />
+                </div>
 
                 {/* <div class="cta-container">
                     <SliderContain />
