@@ -15,6 +15,21 @@ const Cart = ({ cartOpen, setCartOpen }) => {
         document.body.style.overflow = cartOpen ? 'auto' : 'hidden';
     };
 
+    // ----Enviar pedido a Whatsapp---------
+    const realizarPedido = (e) => {
+        e.preventDefault();
+
+        // const datosUsuario = { nombre, apellido, correo, metodoPago, ubicacion, entrega };
+        const numeroTelefonico = "573023602591";
+        // Crear mensaje con los productos
+        const mensaje = `Hola, me gustaría realizar el siguiente pedido: ${cartItems.map((producto) => `${producto.name} - $${producto.price} - Cantidad: ${producto.amount}`)}`;
+
+        const enlaceWha = `https://wa.me/${numeroTelefonico}?text=${encodeURIComponent(mensaje)}`;
+
+        // Redirigir a Whatsapp
+        window.open(enlaceWha, "_blank");
+    };
+
     return (
         <div className={cartOpen ? "cart open" : "cart"}>
             <img className='Close-cart' onClick={toggleCart} src={close} alt="close Icon" />
@@ -32,8 +47,8 @@ const Cart = ({ cartOpen, setCartOpen }) => {
                     <p className='cart-total'>${total}</p>
                 </div>
                 <p>El costo de envío es totalmente GRATIS!</p>
-                <button disabled={cartItems.length === 0}>
-                    <Link to="/checkout" className={cartItems.length === 0 ? 'disabled-link' : ''}>Ir a Checkout</Link>
+                <button onClick={realizarPedido} disabled={cartItems.length === 0}>
+                    Enviar a Whatsapp
                 </button>
             </div>
         </div>

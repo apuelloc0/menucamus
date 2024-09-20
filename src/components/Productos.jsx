@@ -11,7 +11,7 @@ import useSheets from '../useSheets';
 import ButtonCategories from './ButtonCategories';
 import SearchBar from './SearchBar';
 
-const Productos = ({ routeCategory }) => {
+const Productos = () => {
     const { addItemToCart } = useContext(CartContext);
     const [filter, setFilter] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
@@ -19,11 +19,12 @@ const Productos = ({ routeCategory }) => {
     const containerRef = useRef(null);
 
     const { data, loading, error } = useSheets(
-        'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
-        '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
-        'Class Data!A2:F',
+        'AIzaSyBpHDI9OLva3Ed1ANXi27__yYzcjfm85Dg',
+        '1I9-znBWD0kn6pRlctgprPgYZySOjTlOeHdA9hfGLfaw',
+        'Hoja1!A2:G',
         filter
     );
+
 
     const productosConId = data ? data.map(product => ({ ...product, id: uuidv4() })) : [];
 
@@ -43,28 +44,21 @@ const Productos = ({ routeCategory }) => {
     return (
         <div className="shirts-container">
             <ButtonCategories setFilter={setFilter} />
-            <SearchBar setFilter={setFilter} />
 
             <div ref={containerRef} className="Pro-Container">
                 {
-                    loading ? <Loading /> : currentItems.map((shirt, i) => (
+                    loading ? <Loading /> : currentItems.map((product, i) => (
                         <Link key={i} to={""}>
                             <div key={i} className="pro">
-                                <img src={shirt.img} alt={shirt.name} />
+                                <img src={product.img} alt={product.name} />
                                 <div className="des">
-                                    <span>{shirt.marca}</span>
-                                    <span>{shirt.capacidad}</span>
-                                    <h5>{shirt.name}</h5>
-                                    <div className="star">
-                                        <img src={star} alt="" />
-                                        <img src={star} alt="" />
-                                        <img src={star} alt="" />
-                                        <img src={star} alt="" />
-                                        <img src={star} alt="" />
-                                    </div>
-                                    <h4>${shirt.price}</h4>
+                                    <h5>{product.name}</h5>
+                                    <p>
+                                        {product.description}
+                                    </p>
+                                    <h4>${product.price}</h4>
                                 </div>
-                                <Link className="a-contain" onClick={() => addItemToCart(shirt)}>
+                                <Link className="a-contain" onClick={() => addItemToCart(product)}>
                                     <img className="shopping" src={cart} alt="Shopping Cart" />
                                 </Link>
                             </div>
@@ -95,70 +89,55 @@ export default Productos;
 
 
 
+// const { data, loading, error, isSignedIn, handleAuthClick, handleSignoutClick } = useSheets(
+//     'AIzaSyBpHDI9OLva3Ed1ANXi27__yYzcjfm85Dg',
+//     '998757493551-clg7dtumku5oeba5mnmni2gkn6hlo9tv.apps.googleusercontent.com',
+//     '1I9-znBWD0kn6pRlctgprPgYZySOjTlOeHdA9hfGLfaw',
+//     'Hoja1!A2:G'
+// );
+
+
+{/* <div className="shirts-container">
+<ButtonCategories setFilter={setFilter} />
+
+<div ref={containerRef} className="Pro-Container">
+    {
+        loading ? <Loading /> : currentItems.map((product, i) => (
+            <Link key={i} to={""}>
+                <div key={i} className="pro">
+                    <img src={product.img} alt={product.name} />
+                    <div className="des">
+                        <h5>{product.name}</h5>
+                        <p>
+                            {product.description}
+                        </p>
+                        <h4>${product.price}</h4>
+                    </div>
+                    <Link className="a-contain" onClick={() => addItemToCart(product)}>
+                        <img className="shopping" src={cart} alt="Shopping Cart" />
+                    </Link>
+                </div>
+            </Link>
+        ))
+    }
+</div>
+
+<ReactPaginate
+    previousLabel={'<'}
+    nextLabel={'>'}
+    breakLabel={'...'}
+    pageCount={totalPages}
+    marginPagesDisplayed={2}
+    pageRangeDisplayed={5}
+    onPageChange={handlePageClick}
+    containerClassName={'pagination'}
+    activeClassName={'active'}
+/>
+</div> */}
 
 
 
-// import React, { useContext, useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { v4 as uuidv4 } from 'uuid';
-// import "../cssfolder/Productos.css";
-// import star from "../icons/staryellow.png";
-// import cart from "../icons/shop-cart.svg";
-// import { CartContext } from '../Context/CartContext';
-// import Loading from './Loading';
-// import useSheets from '../useSheets';
-// import ButtonCategories from './ButtonCategories'; // Importa ButtonCategories
 
-// const Productos = ({ routeCategory }) => {
-//     const { addItemToCart } = useContext(CartContext);
-//     const [filter, setFilter] = useState(''); // Estado para el filtro
 
-//     const { data, loading, error } = useSheets(
-//         'AIzaSyCLsHC4bgV6pZEr-IVI2ZCQhh_2aqT6WgQ',
-//         '1t2LTL1etnEbydgflTZ6b82vTTs1UOUhDFS8Hl3XlDyA',
-//         'Class Data!A2:F',
-//         filter // Pasar el filtro al custom hook
-//     );
 
-//     // Asignar IDs únicos a cada producto
-//     const productosConId = data.map(product => ({ ...product, id: uuidv4() }));
-
-//     return (
-//         <div className="shirts-container">
-//             <ButtonCategories setFilter={setFilter} /> {/* Incluye ButtonCategories */}
-
-//             <div className="Pro-Container">
-//                 {
-//                     productosConId.map((shirt, i) => (
-//                         <Link key={i} to={""}>
-//                             <div key={i} className="pro">
-//                                 <img src={shirt.img} alt={shirt.name} />
-//                                 <div className="des">
-//                                     <span>{shirt.marca}</span>
-//                                     <span>{shirt.capacidad}</span>
-//                                     <h5>{shirt.name}</h5>
-//                                     <div className="star">
-//                                         <img src={star} alt="" />
-//                                         <img src={star} alt="" />
-//                                         <img src={star} alt="" />
-//                                         <img src={star} alt="" />
-//                                         <img src={star} alt="" />
-//                                     </div>
-//                                     <h4>${shirt.price}</h4>
-//                                 </div>
-//                                 <Link onClick={() => addItemToCart(shirt)}>
-//                                     <img className="shopping" src={cart} alt="" />
-//                                 </Link>
-//                             </div>
-//                         </Link>
-//                     ))
-//                 }
-//             </div>
-
-//             {loading && <Loading />}
-//         </div>
-//     );
-// }
-
-// export default Productos;
 

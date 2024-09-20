@@ -39,13 +39,13 @@ const useGoogleSheets = (apiKey, spreadsheetId, range, filter) => {
                 const mappedData = rows.map(row => ({
                     img: row[0],
                     name: row[1],
-                    price: row[2],
-                    marca: row[3],
-                    capacidad: row[4],
+                    type: row[2],
+                    description: row[3],
+                    price: row[4],
                 }));
                 // Filtrar los datos según el filtro proporcionado
                 const filteredData = mappedData.filter(product => 
-                    product.name.toLowerCase().includes(filter.toLowerCase())
+                    product.type.toLowerCase().includes(filter.toLowerCase())
                 );
                 setData(filteredData);
             } catch (err) {
@@ -62,4 +62,9 @@ const useGoogleSheets = (apiKey, spreadsheetId, range, filter) => {
 };
 
 export default useGoogleSheets;
+
+
+
+
+
 

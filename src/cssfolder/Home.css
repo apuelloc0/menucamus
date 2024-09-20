@@ -1,25 +1,30 @@
 .Home {
     max-width: 100%;
-    margin-top: 135px;
+    margin-top: 95px;
 }
 
 .Home-hero {
-    height: 350px;
+    height: 400px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    /* margin-top: 200px; */
-    /* background-color: #d4d3d1; */
+    background-image: url("../icons/bannervegetales.webp");
 }
 
 .slider-container {
-    width: 45%;
-    height: 100%;
-    background-color: #fff;
+    width: 27%;
+    height: 85%;
+    background-color: #ccfccd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
 }
 
 .cta-container {
@@ -155,9 +160,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../icons/banneramigos.webp");
+    background-image: url("../icons/bannercamus.webp");
     /* background-attachment: fixed; */
-    width: 100%;
+    width: 450%;
     height: 40vh;
     background-size: contain;
     background-position: center;
@@ -198,6 +203,7 @@
     justify-content: space-around;
     margin-top: 20px;
     padding: 0 10px 0 10px;
+    height: 500px;
 }
 
 .sm-banner .banner-box {
@@ -206,20 +212,22 @@
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    background-image: url("../icons/bannerburguer.webp");
-    width: 35%;
-    height: 300px;
+    background-image: url("../icons/imgparrilla.webp");
+    width: 25%;
+    height: 100%;
+    /* height: 300px; */
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 .sm-banner .banner-box2 {
-    background-image: url("../icons/bannerviajes.webp");
+    background-image: url("../icons/bannercamus.webp");
     background-size: cover;
-    background-position: center;
-    width: 55%;
+    /* background-position: center; */
+    width: 60%;
+    height: 100%;
 }
 
 .sm-banner h4 {
@@ -375,7 +383,7 @@
 
 @media (max-width: 600px) {
     .Home {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     .Home-hero {
@@ -389,8 +397,8 @@
     }
 
     .slider-container {
-        width: 100%;
-        height: 85%;
+        width: 69%;
+        height: 65%;
     }
 
     .slider-container:nth-child(2) {
@@ -449,6 +457,8 @@
         width: 100%;
         margin: 20px 0 0 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .sm-banner .banner-box {
@@ -462,7 +472,8 @@
     }
 
     .sm-banner .banner-box2 {
-        display: none;
+        width: 100%;
+        height: 50%;
     }
 
     .Home .banner3 {

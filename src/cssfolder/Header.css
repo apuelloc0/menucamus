@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #f5fff5;
     height: 100px;
     position: fixed;
     width: 100%;
@@ -238,8 +238,8 @@
     }
 
     .Logo {
-        height: 70px;
-        width: 82px;
+        height: 72px;
+        width: 78px;
     }
 
     .ul-container {

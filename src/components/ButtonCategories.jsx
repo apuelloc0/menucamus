@@ -22,25 +22,25 @@ const ButtonCategories = ({ setFilter }) => {
             <button className="scroll-button" onClick={scrollLeft}>{"<"}</button>
             <div className="Button-category" ref={containerRef}>
                 <div className="category-item" onClick={() => setFilter('')}>
-                    <img src={lagerImage} alt="Lager" />
+                    {/* <img src={lagerImage} alt="Lager" /> */}
                     <p>Mostrar Todos</p>
                 </div>
-                <div className="category-item" onClick={() => setFilter('Cerveza')}>
-                    <img src={tequilaImage} alt="Tequila" />
-                    <p>Cervezas</p>
+                <div className="category-item" onClick={() => setFilter('comida')}>
+                    {/* <img src={tequilaImage} alt="Tequila" /> */}
+                    <p>Menu del Dia</p>
                 </div>
-                <div className="category-item" onClick={() => setFilter('Ron')}>
-                    <img src={whiteWineImage} alt="White Wine" />
-                    <p>Ron</p>
+                <div className="category-item" onClick={() => setFilter('bebida')}>
+                    {/* <img src={whiteWineImage} alt="White Wine" /> */}
+                    <p>Bebidas</p>
                 </div>
-                <div className="category-item" onClick={() => setFilter('Aguardiente')}>
-                    <img src={aleImage} alt="Ale" />
-                    <p>Aguardiente</p>
+                <div className="category-item" onClick={() => setFilter('postre')}>
+                    {/* <img src={aleImage} alt="Ale" /> */}
+                    <p>Postres</p>
                 </div>
-                <div className="category-item" onClick={() => setFilter('Mecatos')}>
+                {/* <div className="category-item" onClick={() => setFilter('Mecatos')}>
                     <img src={redWineImage} alt="Mecatos" />
                     <p>Mecatos</p>
-                </div>
+                </div> */}
             </div>
             <button className="scroll-button" onClick={scrollRight}>{">"}</button>
         </div>

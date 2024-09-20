@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { CartContext } from '../Context/CartContext';
 import "../cssfolder/Header.css";
 import cartIcon from "../icons/shopping.svg";
-import logo from "../icons/logonissysin.webp"; // Asegúrate de importar el logo
+import logo from "../icons/logocamus.webp"; // Asegúrate de importar el logo
 import whatsappIcon from "../icons/WhatsApp.png.webp"; // Asegúrate de importar el icono de WhatsApp
 import Cart from './Cart';
 import { Link } from 'react-router-dom';
@@ -46,15 +46,17 @@ const Header = () => {
                     {cartOpen && <div className="Overlay" onClick={() => setCartOpen(false)}></div>}
                     <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
                 </div>
+                {/* <div className='buttonCart'>
+                    <img onClick={() => setCartOpen(!cartOpen)} src={cartIcon} alt="cart Icon" />
+                    {cartItems.length !== 0 && (
+                        <div className='productsNumber'>{cartItems.length}</div>
+                    )}
+                    {cartOpen && <div className="Overlay" onClick={() => setCartOpen(false)}></div>}
+                    <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
+                </div> */}
 
             </div>
 
-            {/* <div className='cta-container'>
-                <button className='cta-button'>
-                    Contáctanos
-                    <img src={whatsappIcon} alt="WhatsApp Logo" className='whatsapp-logo' />
-                </button>
-            </div> */}
         </header>
     );
 };
