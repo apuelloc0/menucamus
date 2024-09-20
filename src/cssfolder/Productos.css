@@ -84,6 +84,9 @@
     font-size: 15px;
     font-weight: 700;
     color: #088178;
+    position: absolute;
+    bottom: 0px;
+    left: 13px;
 }
 
 
@@ -184,8 +187,8 @@
 
     .shirts-container .pro {
         min-width: 0;
-        width: 290px;
-        height: 270px;
+        width: 170px;
+        height: 292px;
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -203,6 +206,10 @@
         display: flex;
         flex-direction: column;
         padding: 0;
+    }
+
+    .shirts-container .pro .des p {
+        font-size: 11px;
     }
 
     .shirts-container .pro .des span {

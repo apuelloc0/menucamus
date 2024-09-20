@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="Footer-Contact">
                     <span>Contacto</span>
                     <span>300-6624419</span>
-                    <span>@perfumesblessed_</span>
+                    <span>@menu_camus</span>
 
                 </div>
                 {/* <div className="Footer-Pay">

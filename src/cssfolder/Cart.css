@@ -103,7 +103,8 @@ body.modal-open {
 
 .Ordering p {
     margin: 0;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 .Ordering button {
@@ -163,6 +164,9 @@ body.modal-open {
 .Ordering-total p.cart-total {
     padding: 0 24px 0 24px;
     letter-spacing: 1px;
+    color: #148614;
+    font-size: 14px;
+    font-weight: 800;
 }
 
 .cart-total {

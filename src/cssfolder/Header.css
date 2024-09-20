@@ -122,6 +122,15 @@
     cursor: pointer;
 }
 
+.buttonCart-left {
+    margin-right: 0;
+}
+
+.buttonCart-admin {
+    width: 24px;
+    height: 24px;
+}
+
 .productsNumber {
     position: absolute;
     top: -8px;
