@@ -46,7 +46,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
                     <p className='cart-total'>Total a pagar</p>
                     <p className='cart-total'>${total}</p>
                 </div>
-                <p>Para procesar tu pedido haz Click en Enviar a whatsapp</p>
+                <p>Nota: Para procesar tu pedido haz Click en Enviar a whatsapp</p>
                 <button onClick={realizarPedido} disabled={cartItems.length === 0}>
                     Enviar a Whatsapp
                 </button>

@@ -104,7 +104,7 @@ body.modal-open {
 .Ordering p {
     margin: 0;
     font-size: 12px;
-    font-weight: 800;
+    /* font-weight: 800; */
 }
 
 .Ordering button {
