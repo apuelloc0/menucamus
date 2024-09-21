@@ -1,7 +1,6 @@
 import "../cssfolder/Home.css";
 import Productos from "../components/Productos";
 import logocamus from "../icons/logocamus.webp";
-import Fade from 'react-reveal/Fade';
 
 const Home = () => {
 
@@ -10,9 +9,9 @@ const Home = () => {
 
             <div class="Home-hero">
                 <div class="slider-container">
-                    <Fade bottom>
-                        <img src={logocamus} alt="" />
-                    </Fade>
+
+                    <img src={logocamus} alt="" />
+
                 </div>
             </div>
 
@@ -22,12 +21,12 @@ const Home = () => {
             </div> */}
 
             <div className="sm-banner">
-                <Fade left>
-                    <div className="sm-banner banner-box"></div>
-                </Fade>
-                <Fade right>
-                    <div className="sm-banner banner-box2"></div>
-                </Fade>
+
+                <div className="sm-banner banner-box"></div>
+
+
+                <div className="sm-banner banner-box2"></div>
+
             </div>
 
         </div>

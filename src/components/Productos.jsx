@@ -10,7 +10,6 @@ import Loading from './Loading';
 import useSheets from '../useSheets';
 import ButtonCategories from './ButtonCategories';
 import SearchBar from './SearchBar';
-import { Fade } from 'react-reveal';
 
 const Productos = () => {
     const { addItemToCart } = useContext(CartContext);
@@ -50,21 +49,21 @@ const Productos = () => {
                 {
                     loading ? <Loading /> : currentItems.map((product, i) => (
                         <Link key={i} to={""}>
-                            <Fade>
-                                <div key={i} className="pro">
-                                    <img src={product.img} alt={product.name} />
-                                    <div className="des">
-                                        <h5>{product.name}</h5>
-                                        <p>
-                                            {product.description}
-                                        </p>
-                                        <h4>${product.price}</h4>
-                                    </div>
-                                    <Link className="a-contain" onClick={() => addItemToCart(product)}>
-                                        <img className="shopping" src={cart} alt="Shopping Cart" />
-                                    </Link>
+
+                            <div key={i} className="pro">
+                                <img src={product.img} alt={product.name} />
+                                <div className="des">
+                                    <h5>{product.name}</h5>
+                                    <p>
+                                        {product.description}
+                                    </p>
+                                    <h4>${product.price}</h4>
                                 </div>
-                            </Fade>
+                                <Link className="a-contain" onClick={() => addItemToCart(product)}>
+                                    <img className="shopping" src={cart} alt="Shopping Cart" />
+                                </Link>
+                            </div>
+
                         </Link>
                     ))
                 }
