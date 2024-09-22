@@ -1,6 +1,6 @@
 import React from 'react'
 import "../cssfolder/Footer.css";
-import logo from "../icons/logocamus.webp"; // Asegúrate de importar el logo
+import logo from "../icons/logokamus.webp"; // Asegúrate de importar el logo
 import { Link } from 'react-router-dom';
 import instagram from "../icons/instaicon.svg";
 import facebook from "../icons/facebook.svg";

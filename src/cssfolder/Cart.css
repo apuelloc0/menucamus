@@ -101,9 +101,10 @@ body.modal-open {
     gap: 16px;
 }
 
-.Ordering p {
-    margin: 0;
-    font-size: 12px;
+.Ordering .p-enviar {
+    margin: 0 7px 0 7px;
+    font-size: 11px;
+    color: #9f9f9f;
     /* font-weight: 800; */
 }
 

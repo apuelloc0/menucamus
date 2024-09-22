@@ -3,7 +3,7 @@ import { CartContext } from '../Context/CartContext';
 import "../cssfolder/Header.css";
 import cartIcon from "../icons/shopping.svg";
 import admin from "../icons/admin.svg";
-import logo from "../icons/logocamus.webp"; // Asegúrate de importar el logo
+import logo from "../icons/logokamus.webp"; // Asegúrate de importar el logo
 import whatsappIcon from "../icons/WhatsApp.png.webp"; // Asegúrate de importar el icono de WhatsApp
 import Cart from './Cart';
 import { Link } from 'react-router-dom';

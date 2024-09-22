@@ -188,11 +188,12 @@
     .shirts-container .pro {
         min-width: 0;
         width: 170px;
-        height: 292px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         padding: 0;
         align-items: center;
+        gap: 5px
     }
 
     .shirts-container .pro img {
@@ -219,14 +220,15 @@
     .shirts-container .pro .des h5 {
         font-size: 13px;
         font-weight: 600;
-        margin: 2px 0 4px 0;
+        margin: 5px 0 4px 0;
     }
 
     .shirts-container .pro .des h4 {
         margin: 10px 0 0 6px;
         font-size: 16px;
         position: absolute;
-        bottom: 10px;
+        bottom: 6px;
+        left: 7px;
     }
 
     div .star {
@@ -236,8 +238,8 @@
     .shirts-container .pro a .shopping {
         width: 24px;
         height: 25px;
-        bottom: 10px;
-        right: 15px;
+        bottom: 6px;
+        right: 10px;
     }
 
     .pagination {

@@ -1,6 +1,6 @@
 import "../cssfolder/Home.css";
 import Productos from "../components/Productos";
-import logocamus from "../icons/logocamus.webp";
+import logokamus from "../icons/logokamus.webp";
 
 const Home = () => {
 
@@ -10,7 +10,7 @@ const Home = () => {
             <div class="Home-hero">
                 <div class="slider-container">
 
-                    <img src={logocamus} alt="" />
+                    <img src={logokamus} alt="" />
 
                 </div>
             </div>
