@@ -99,6 +99,7 @@ body.modal-open {
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
+    margin-bottom: 22px;
 }
 
 .Ordering .p-enviar {
@@ -111,7 +112,7 @@ body.modal-open {
 .Ordering button {
     height: 36px;
     width: 70%;
-    padding: 0 20px 0 20px;
+    padding: 8px 20px 8px 20px;
     border: none;
     color: black;
     font-weight: 400;
@@ -245,6 +246,7 @@ body.modal-open {
         justify-content: center;
         align-items: center;
         gap: 10px;
+        margin-bottom: 0;
     }
 
     .Ordering p {
