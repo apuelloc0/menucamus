@@ -31,7 +31,7 @@ const Checkout = () => {
         <div className='Checkout'>
             {!selectedOption && (
                 <div className="Checkout-selection">
-                    <button onClick={() => setSelectedOption('pse')}>Pagar con PSE</button>
+                    {/* <button onClick={() => setSelectedOption('pse')}>Pagar con PSE</button> */}
                     <button onClick={() => setSelectedOption('whatsapp')}>Enviar pedido a WhatsApp</button>
                 </div>
             )}

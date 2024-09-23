@@ -65,7 +65,8 @@ select {
 }
 
 .form-text p {
-    font-size: 13px;
+    font-size: 11px;
+    color: #9f9f9f;
     margin: 20px 0;
 }
 
@@ -74,6 +75,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 }
 
 .Send-wha {

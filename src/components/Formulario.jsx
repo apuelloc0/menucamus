@@ -64,7 +64,7 @@ const Formulario = () => {
                         required
                     />
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label htmlFor="correo">Correo Electrónico:</label>
                     <input
                         type="email"
@@ -73,7 +73,7 @@ const Formulario = () => {
                         onChange={(e) => setCorreo(e.target.value)}
                         required
                     />
-                </div>
+                </div> */}
                 <div className="form-group">
                     <label htmlFor="entrega">Entrega:</label>
                     <select
@@ -81,7 +81,7 @@ const Formulario = () => {
                         value={entrega}
                         onChange={(e) => setEntrega(e.target.value)}
                     >
-                        <option value="tienda">Retiro en tienda</option>
+                        <option value="tienda">Retiro en local</option>
                         <option value="envio">Domicilio</option>
                     </select>
                 </div>
@@ -92,9 +92,9 @@ const Formulario = () => {
                         value={metodoPago}
                         onChange={(e) => setMetodoPago(e.target.value)}
                     >
-                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
-                        <option value="paypal">PayPal</option>
-                        <option value="efectivo">Pago en Efectivo</option>
+                        <option value="tarjeta">Pago contra entrega</option>
+                        <option value="paypal">Pago Móvil</option>
+                        <option value="efectivo">Transferencia</option>
                     </select>
                 </div>
                 <div className="form-group">

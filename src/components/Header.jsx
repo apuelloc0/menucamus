@@ -9,6 +9,8 @@ import Cart from './Cart';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+
     const [cartOpen, setCartOpen] = useState(false);
     const { cartItems } = useContext(CartContext);
     const [shrink, setShrink] = useState(false);

@@ -44,6 +44,7 @@ const Productos = () => {
     return (
         <div className="shirts-container">
             <ButtonCategories setFilter={setFilter} />
+            <SearchBar setFilter={setFilter} />
 
             <div ref={containerRef} className="Pro-Container">
                 {

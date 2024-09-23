@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../Context/CartContext';
 import "../cssfolder/Cart.css";
 import close from "../icons/x.png";
@@ -6,13 +6,21 @@ import ItemCart from './ItemCart';
 import { Link } from 'react-router-dom';
 
 const Cart = ({ cartOpen, setCartOpen }) => {
-    const { cartItems } = useContext(CartContext);
 
+    const { cartItems } = useContext(CartContext);
     const total = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
+
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [shippingMethod, setShippingMethod] = useState('local');
+    const shippingCost = 3;
 
     const toggleCart = () => {
         setCartOpen(!cartOpen);
         document.body.style.overflow = cartOpen ? 'auto' : 'hidden';
+    };
+
+    const handleShippingChange = (method) => {
+        setShippingMethod(method);
     };
 
     // ----Enviar pedido a Whatsapp---------
@@ -42,13 +50,42 @@ const Cart = ({ cartOpen, setCartOpen }) => {
                 </div>
             )}
             <div className="Ordering">
+                {/* <div >
+                    <div className="envio-p">
+                        <p className='envio'>Envio</p>
+                    </div>
+                    <div className="envio-option">
+                        <div className='input-1'>
+                            <input
+                                type="radio"
+                                id="local"
+                                name="shipping"
+                                value="local"
+                                checked={shippingMethod === 'local'}
+                                onChange={() => handleShippingChange('local')}
+                            />
+                            <label htmlFor="local">Recoger en tienda</label>
+                        </div>
+                        <div className='input-2'>
+                            <input
+                                type="radio"
+                                id="domicilio"
+                                name="shipping"
+                                value="domicilio"
+                                checked={shippingMethod === 'domicilio'}
+                                onChange={() => handleShippingChange('domicilio')}
+                            />
+                            <label htmlFor="domicilio">Domicilio <span>$3</span></label>
+                        </div>
+                    </div>
+                </div> */}
                 <div className="Ordering-total">
-                    <p className='cart-total'>Total a pagar</p>
+                    <p className='cart-total'>Subtotal</p>
                     <p className='cart-total'>${total}</p>
                 </div>
                 <p className='p-enviar'>Nota: Para procesar tu pedido haz Click en Enviar a whatsapp</p>
-                <button onClick={realizarPedido} disabled={cartItems.length === 0}>
-                    Enviar a Whatsapp
+                <button disabled={cartItems.length === 0}>
+                    <Link to="/checkout">Ir a Checkout</Link>
                 </button>
             </div>
         </div>
