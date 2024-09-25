@@ -13,10 +13,18 @@
 
 }
 
+.form-container p {
+    font-size: 13px;
+    color: #898989;
+    text-align: center;
+}
+
 .form-container h2.title-form {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 0;
     font-weight: 500;
+    color: gray;
 }
 
 .form-group {
@@ -75,7 +83,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .Send-wha {

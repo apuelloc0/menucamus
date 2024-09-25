@@ -8,6 +8,7 @@ const Formulario = () => {
 
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
+    const [numero, setNumero] = useState('');
     const [correo, setCorreo] = useState('');
     const [metodoPago, setMetodoPago] = useState('');
     const [ubicacion, setUbicacion] = useState('');
@@ -43,6 +44,7 @@ const Formulario = () => {
     return (
         <div className="form-container">
             <h2 className='title-form'>Contacto</h2>
+            <p>El pago se coordina luego</p>
             <form onSubmit={realizarPedido}>
                 <div className="form-group">
                     <label htmlFor="nombre">Nombre:</label>
@@ -64,16 +66,16 @@ const Formulario = () => {
                         required
                     />
                 </div>
-                {/* <div className="form-group">
-                    <label htmlFor="correo">Correo Electrónico:</label>
+                <div className="form-group">
+                    <label htmlFor="numero">Número Telefonico:</label>
                     <input
-                        type="email"
-                        id="correo"
-                        value={correo}
-                        onChange={(e) => setCorreo(e.target.value)}
+                        type="text"
+                        id="numero"
+                        value={numero}
+                        onChange={(e) => setNumero(e.target.value)}
                         required
                     />
-                </div> */}
+                </div>
                 <div className="form-group">
                     <label htmlFor="entrega">Entrega:</label>
                     <select
@@ -92,13 +94,14 @@ const Formulario = () => {
                         value={metodoPago}
                         onChange={(e) => setMetodoPago(e.target.value)}
                     >
-                        <option value="tarjeta">Pago contra entrega</option>
-                        <option value="paypal">Pago Móvil</option>
-                        <option value="efectivo">Transferencia</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta(Disponible en sitio)</option>
+                        <option value="binance">Pago Online(Binance, Zelle)</option>
+                        <option value="pagomovil">Transferencia(Pago Móvil)</option>
                     </select>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="ubicacion">Ubicación:</label>
+                    <label htmlFor="ubicacion">Dirección:</label>
                     <input
                         type="text"
                         id="ubicacion"

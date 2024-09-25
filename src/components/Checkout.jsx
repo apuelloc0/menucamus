@@ -31,8 +31,8 @@ const Checkout = () => {
         <div className='Checkout'>
             {!selectedOption && (
                 <div className="Checkout-selection">
-                    {/* <button onClick={() => setSelectedOption('pse')}>Pagar con PSE</button> */}
-                    <button onClick={() => setSelectedOption('whatsapp')}>Enviar pedido a WhatsApp</button>
+                    {/* <button onClick={() => setSelectedOption('pse')}>Métodos de Pago</button> */}
+                    <button onClick={() => setSelectedOption('whatsapp')}>Métodos de Pago</button>
                 </div>
             )}
 
@@ -49,7 +49,7 @@ const Checkout = () => {
                     <div className="Checkout-products">
                         <div className="Checkout-list">
                             <div className='Checkout-title'>
-                                <h2 className='title'>Tu Pedido</h2>
+                                <h2 className='title'>Resumen de Pedido</h2>
                             </div>
                         </div>
 
@@ -105,6 +105,7 @@ const Checkout = () => {
                                     </div>
                                 </div>
                             </div>
+
                             <div>
                                 <p className='total'>Total</p>
                                 <p className='total'>USD $ {calculateTotal()}</p>
