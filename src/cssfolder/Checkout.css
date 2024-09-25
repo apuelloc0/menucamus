@@ -184,18 +184,20 @@
     width: 65%;
     display: flex;
     gap: 10px;
+    margin-left: 10px;
 }
 
 .Checkout-items-left img {
     width: 60px;
     height: 60px;
-    border-radius: 15px;
+    border-radius: 7px;
+    object-fit: cover;
 }
 
 .Checkout-items-left p {
     color: #465b52;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .Checkout-items-right {

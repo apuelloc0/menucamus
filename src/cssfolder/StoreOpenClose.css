@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     position: fixed;
-    right: 20px;
+    right: 10px;
     bottom: 10px;
     cursor: pointer;
     z-index: 1;
@@ -34,7 +34,7 @@
 }
 
 .store-status.closed {
-    background-color: #f8d7da;
+    background-color: #f8d7da94;
     color: #721c24;
 }
 
@@ -51,7 +51,7 @@ img.reloj-icon {
     }
 
     .store-status.closed {
-        background-color: #ff2236;
+        background-color: #ff2236cc;
         color: white;
     }
 

@@ -218,8 +218,9 @@
     }
 
     .shirts-container .pro .des h5 {
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
+        letter-spacing: 0.8px;
         margin: 5px 0 4px 0;
     }
 
