@@ -1,0 +1,90 @@
+.store-status {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 6px 5px;
+}
+
+.store-status span {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.store-status small {
+    font-size: 12px;
+    /* padding-bottom: 4px; */
+    font-weight: 600;
+}
+
+.store-status.open {
+    background-color: #b6ffc7;
+    color: #009b24;
+}
+
+.store-status.closed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+img.reloj-icon {
+    width: 16%;
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+    .store-status {
+        width: 70px;
+        right: 5px;
+        padding: 3px 12px;
+    }
+
+    .store-status.closed {
+        background-color: #ff2236;
+        color: white;
+    }
+
+    .store-status span {
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .store-status small {
+        display: none;
+    }
+
+    img.reloj-icon {
+        width: 20%
+    }
+}
+
+
+/* .Whatsapp-button {
+    width: 60px;
+    position: fixed;
+    right: 7px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.Whatsapp-button:hover {
+    width: 62px;
+    transform: scale(1.1);
+}
+
+.Whatsapp-button img {
+    width: 100%;
+} */

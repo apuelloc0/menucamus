@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="Footer-Contact">
                     <span>Contacto</span>
                     <span>300-6624419</span>
-                    <span>@menu_camus</span>
+                    <span>@menu_kamus</span>
 
                 </div>
                 {/* <div className="Footer-Pay">
@@ -31,7 +31,7 @@ const Footer = () => {
                 </div> */}
             </div>
             <div className="Footer-bottom">
-                <p>© 2024 Camus C.A - Puerto la Cruz, Calle Falsa 123</p>
+                <p>© 2024 Kamus C.A - Puerto la Cruz</p>
             </div>
         </div>
     )

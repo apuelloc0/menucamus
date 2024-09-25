@@ -117,7 +117,7 @@ body.modal-open {
     color: black;
     font-weight: 400;
     font-family: "Kanit", sans-serif;
-    background-color: rgb(235, 234, 234);
+    background-color: rgb(227 255 231);
     border-radius: 20px;
     transition: ease-in 0.2s;
 }
