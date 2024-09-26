@@ -18,7 +18,7 @@ const CartProvider = ({ children }) => {
 
     useEffect(() => {
         localStorage.setItem("cartProducts", JSON.stringify(cartItems))
-        console.log(cartItems)
+        console.log(cartItems.length)
         // cada vez que se modificque el carrito, setée el localstorage,lo pasamos en string porque solo se puede en string
     }, [cartItems])
 

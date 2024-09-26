@@ -32,9 +32,9 @@
 
 .cartItem-left p {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.5px;
-    color: rgb(14, 61, 6);
+    color: #465b52;
 }
 
 .cartItem-buttons {

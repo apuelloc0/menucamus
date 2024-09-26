@@ -18,12 +18,13 @@ const Formulario = () => {
     const realizarPedido = (e) => {
         e.preventDefault();
 
-        const datosUsuario = { nombre, apellido, correo, metodoPago, ubicacion, entrega };
+        const datosUsuario = { nombre, apellido, numero, correo, metodoPago, ubicacion, entrega };
         const numeroTelefonico = "573023602591";
         // Crear mensaje con los productos
         const mensaje = `Hola, me gustaría realizar el pedido: ${cartItems.map((producto) => `${producto.name} - ${producto.price} - ${producto.amount}`).join(', ')}. Mis datos son los siguientes:
         \n- Nombre: ${datosUsuario.nombre}
         \n- Apellido: ${datosUsuario.apellido}
+        \n- Apellido: ${datosUsuario.numero}
         \n- Correo: ${datosUsuario.correo}
         \n- Método de Pago: ${datosUsuario.metodoPago}
         \n- Entrega: ${datosUsuario.entrega}
@@ -44,7 +45,7 @@ const Formulario = () => {
     return (
         <div className="form-container">
             <h2 className='title-form'>Contacto</h2>
-            <p>El pago se coordina luego</p>
+            {/* <p>El pago se coordina luego</p> */}
             <form onSubmit={realizarPedido}>
                 <div className="form-group">
                     <label htmlFor="nombre">Nombre:</label>
@@ -101,7 +102,7 @@ const Formulario = () => {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="ubicacion">Dirección:</label>
+                    <label htmlFor="ubicacion">Dirección(en caso de elegir Domicilio):</label>
                     <input
                         type="text"
                         id="ubicacion"
