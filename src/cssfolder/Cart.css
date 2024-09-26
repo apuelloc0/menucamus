@@ -247,7 +247,6 @@ div:nth-child(2) .envio-option {
     .cart {
         width: 85%;
         height: 100vh;
-        background-color: #f5fff5;
         /* justify-content: flex-start; */
     }
 
@@ -298,6 +297,13 @@ div:nth-child(2) .envio-option {
     .Ordering p {
         font-size: 13px;
         margin: 0;
+    }
+
+    .Ordering .p-enviar {
+        margin: 0 14px 0 14px;
+        font-size: 10px;
+        color: #9f9f9f;
+        text-align: center;
     }
 
     .Ordering-total {
