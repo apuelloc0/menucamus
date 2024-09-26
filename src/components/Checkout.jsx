@@ -78,7 +78,7 @@ const Checkout = () => {
                             </div>
                             <div>
                                 <div className="envio-p">
-                                    <p className='envio'>Envio</p>
+                                    <p className='envio'>Entrega</p>
                                 </div>
                                 <div className="envio-option">
                                     <div className='input-1'>

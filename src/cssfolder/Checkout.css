@@ -226,8 +226,9 @@ div:nth-child(2) .envio-p {
 
 div:nth-child(2) .envio-p p {
     font-size: 14px;
+    font-weight: 800;
+    /* padding: 10px 0 10px 10px; */
     color: black;
-    font-weight: 600;
 }
 
 
@@ -252,11 +253,15 @@ div:nth-child(2) .envio-option {
 .envio-option .input-1 label,
 .envio-option .input-2 label {
     margin-bottom: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
 }
 
 .envio-option .input-2 label span {
     color: #07850d;
     margin-left: 3px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 @media (max-width: 600px) {
@@ -337,7 +342,8 @@ div:nth-child(2) .envio-option {
     }
 
     div:nth-child(2) .envio-p p {
-        font-size: 17px;
+        font-size: 16px;
+        font-weight: 700;
     }
 
     div:nth-child(2) .envio-option {
@@ -357,5 +363,6 @@ div:nth-child(2) .envio-option {
     .Checkout-total div:nth-child(1) p.total {
         /* font-size: 17px; */
         padding: 0;
+        font-weight: 700;
     }
 }
