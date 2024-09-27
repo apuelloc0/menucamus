@@ -3,8 +3,8 @@ import '../cssfolder/Formulario.css'; // Asegúrate de importar el CSS
 import { CartContext } from '../Context/CartContext';
 
 const Formulario = () => {
-    const { cartItems, setCartItems } = useContext(CartContext);
-    console.log(cartItems);
+    const { cartItems } = useContext(CartContext);
+    console.log(cartItems[0].name);
 
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
@@ -18,17 +18,12 @@ const Formulario = () => {
     const realizarPedido = (e) => {
         e.preventDefault();
 
-        const datosUsuario = { nombre, apellido, numero, correo, metodoPago, ubicacion, entrega };
+        const datosUsuario = { nombre, apellido, numero, metodoPago, ubicacion, entrega };
         const numeroTelefonico = "573023602591";
         // Crear mensaje con los productos
-        const mensaje = `Hola, me gustaría realizar el pedido: ${cartItems.map((producto) => `${producto.name} - ${producto.price} - ${producto.amount}`).join(', ')}. Mis datos son los siguientes:
-        \n- Nombre: ${datosUsuario.nombre}
-        \n- Apellido: ${datosUsuario.apellido}
-        \n- Numero de Cliente: ${datosUsuario.numero}
-        \n- Correo: ${datosUsuario.correo}
-        \n- Método de Pago: ${datosUsuario.metodoPago}
-        \n- Entrega: ${datosUsuario.entrega}
-        \n- Ubicación: ${datosUsuario.ubicacion}`;
+        const mensaje = `Hola Kamus, me gustaría realizar el siguiente pedido: 
+        \n- ${cartItems.map((producto) => `${producto.name} - $${producto.price} - Cantidad: ${producto.amount}`).join(', ')}. 
+        \n Mis datos son los siguientes: \n- Nombre: ${datosUsuario.nombre} \n- Apellido: ${datosUsuario.apellido} \n- Numero de Cliente: ${datosUsuario.numero} \n- Método de Pago: ${datosUsuario.metodoPago} \n- Entrega: ${datosUsuario.entrega} \n- Ubicación: ${datosUsuario.ubicacion}`;
 
         const enlaceWha = `https://wa.me/${numeroTelefonico}?text=${encodeURIComponent(mensaje)}`;
 
@@ -42,22 +37,11 @@ const Formulario = () => {
         setUbicacion("");
     };
 
-    const handleSendToWhatsapp = () => {
-        // Aquí puedes agregar la lógica para enviar los datos a Whatsapp
-
-        // Vaciar el carrito
-        setCartItems([]);
-        // También puedes limpiar el localStorage si es necesario
-        localStorage.removeItem("cartProducts");
-    };
-
-
-
     return (
         <div className="form-container">
             <h2 className='title-form'>Contacto</h2>
             {/* <p>El pago se coordina luego</p> */}
-            <form onSubmit={realizarPedido} onClick={handleSendToWhatsapp}>
+            <form onSubmit={realizarPedido} >
                 <div className="form-group">
                     <label htmlFor="nombre">Nombre:</label>
                     <input
@@ -95,8 +79,8 @@ const Formulario = () => {
                         value={entrega}
                         onChange={(e) => setEntrega(e.target.value)}
                     >
-                        <option value="tienda">Retiro en local</option>
-                        <option value="envio">Domicilio</option>
+                        <option value="Retiro en local">Retiro en local</option>
+                        <option value="Domicilio">Domicilio</option>
                     </select>
                 </div>
                 <div className="form-group">
@@ -106,10 +90,10 @@ const Formulario = () => {
                         value={metodoPago}
                         onChange={(e) => setMetodoPago(e.target.value)}
                     >
-                        <option value="efectivo">Efectivo</option>
-                        <option value="tarjeta">Tarjeta(Disponible en sitio)</option>
-                        <option value="binance">Pago Online(Binance, Zelle)</option>
-                        <option value="pagomovil">Transferencia(Pago Móvil)</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Tarjeta">Tarjeta(Disponible en sitio)</option>
+                        <option value="Pago Online">Pago Online(Binance, Zelle)</option>
+                        <option value="Pago movil">Transferencia(Pago Móvil)</option>
                     </select>
                 </div>
                 <div className="form-group">

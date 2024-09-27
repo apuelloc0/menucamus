@@ -39,7 +39,7 @@ const Header = () => {
             <div className='buttonCartContainer'>
                 <button className='cta-button'>
                     <p>Contáctanos</p>
-                    <Link to="https://wa.link/0gz26y"><img src={whatsappIcon} alt="WhatsApp Logo" className='whatsapp-logo' /></Link>
+                    <Link to="https://wa.link/gvhh2d" ><img src={whatsappIcon} alt="WhatsApp Logo" className='whatsapp-logo' /></Link>
                 </button>
                 {/* <div className='buttonCart buttonCart-left'>
                     <img onClick={() => setCartOpen(!cartOpen)} src={admin} alt="cart Icon" className="buttonCart-admin" />
@@ -58,7 +58,7 @@ const Header = () => {
 
             </div>
 
-        </header>
+        </header >
     );
 };
 
