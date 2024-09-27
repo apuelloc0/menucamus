@@ -26,12 +26,12 @@ const CartProvider = ({ children }) => {
 
     const addItemToCart = (product) => {
         console.log("Producto a agregar:", product);
-        const inCart = cartItems.find(item => item.id === product.id);
+        const inCart = cartItems.find(item => item.name === product.name);
         console.log("Producto en carrito:", inCart);
 
         if (inCart) {
             const updatedCart = cartItems.map(item =>
-                item.id === product.id ? { ...item, amount: item.amount + 1 } : item
+                item.name === product.name ? { ...item, amount: item.amount + 1 } : item
             );
             console.log("Carrito actualizado:", updatedCart);
             setCartItems(updatedCart);
@@ -70,7 +70,7 @@ const CartProvider = ({ children }) => {
 
 
     return (
-        <CartContext.Provider value={{ cartItems, addItemToCart, deleteItemToCart }}>
+        <CartContext.Provider value={{ cartItems, setCartItems, addItemToCart, deleteItemToCart }}>
             {children}
         </CartContext.Provider>
     )

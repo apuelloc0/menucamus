@@ -85,7 +85,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
                 </div>
                 <p className='p-enviar'>Nota: Para procesar tu pedido haz Click en Enviar a whatsapp</p>
                 <button disabled={cartItems.length === 0}>
-                    <Link to="/checkout">Ir a Checkout</Link>
+                    <Link className={cartItems.length === 0 && "disabled-link"} to="/checkout">Ir a Checkout</Link>
                 </button>
             </div>
         </div>

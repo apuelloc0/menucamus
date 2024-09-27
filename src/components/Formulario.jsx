@@ -3,7 +3,7 @@ import '../cssfolder/Formulario.css'; // Asegúrate de importar el CSS
 import { CartContext } from '../Context/CartContext';
 
 const Formulario = () => {
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, setCartItems } = useContext(CartContext);
     console.log(cartItems);
 
     const [nombre, setNombre] = useState('');
@@ -24,7 +24,7 @@ const Formulario = () => {
         const mensaje = `Hola, me gustaría realizar el pedido: ${cartItems.map((producto) => `${producto.name} - ${producto.price} - ${producto.amount}`).join(', ')}. Mis datos son los siguientes:
         \n- Nombre: ${datosUsuario.nombre}
         \n- Apellido: ${datosUsuario.apellido}
-        \n- Apellido: ${datosUsuario.numero}
+        \n- Numero de Cliente: ${datosUsuario.numero}
         \n- Correo: ${datosUsuario.correo}
         \n- Método de Pago: ${datosUsuario.metodoPago}
         \n- Entrega: ${datosUsuario.entrega}
@@ -42,11 +42,22 @@ const Formulario = () => {
         setUbicacion("");
     };
 
+    const handleSendToWhatsapp = () => {
+        // Aquí puedes agregar la lógica para enviar los datos a Whatsapp
+
+        // Vaciar el carrito
+        setCartItems([]);
+        // También puedes limpiar el localStorage si es necesario
+        localStorage.removeItem("cartProducts");
+    };
+
+
+
     return (
         <div className="form-container">
             <h2 className='title-form'>Contacto</h2>
             {/* <p>El pago se coordina luego</p> */}
-            <form onSubmit={realizarPedido}>
+            <form onSubmit={realizarPedido} onClick={handleSendToWhatsapp}>
                 <div className="form-group">
                     <label htmlFor="nombre">Nombre:</label>
                     <input

@@ -163,7 +163,10 @@
     background-color: white;
     padding: 10px 0 10px 6px;
     border-radius: 10px;
+    text-align: center;
 }
+
+
 
 .cartItem-Checkout {
     width: 100%;

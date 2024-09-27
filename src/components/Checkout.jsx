@@ -32,7 +32,7 @@ const Checkout = () => {
             {!selectedOption && (
                 <div className="Checkout-selection">
                     {/* <button onClick={() => setSelectedOption('pse')}>Métodos de Pago</button> */}
-                    <button onClick={() => setSelectedOption('whatsapp')}>Métodos de Pago</button>
+                    <button onClick={() => setSelectedOption('whatsapp')}>Finalizar Pedido</button>
                 </div>
             )}
 
@@ -54,7 +54,7 @@ const Checkout = () => {
                         </div>
 
                         <div className='productsCheckout'>
-                            {cartItems.map((item, i) => (
+                            {cartItems.length === 0 ? (<p>Tu carrito esta vacío.</p>) : (cartItems.map((item, i) => (
                                 <div key={i} className='cartItem-Checkout'>
                                     <div className='Checkout-items'>
                                         <div className='Checkout-items-left'>
@@ -69,7 +69,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                            )))}
                         </div>
                         <div className="Checkout-total">
                             <div>
