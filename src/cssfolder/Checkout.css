@@ -251,6 +251,7 @@ div:nth-child(2) .envio-option {
 
 .envio-option .input-2 {
     justify-content: flex-end;
+    gap: 0;
 }
 
 .envio-option .input-1 label,
