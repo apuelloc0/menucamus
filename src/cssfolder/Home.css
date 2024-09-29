@@ -497,3 +497,28 @@
     }
 
 }
+
+/* 
+@media (min-width: 601px),
+(max-width: 900px) {
+    .Home-hero {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .slider-container {
+        width: 38%;
+    }
+
+    .sm-banner{
+    height: 264px;
+    }
+
+    .sm-banner .banner-box{
+        width: 30%;
+    }
+
+    .sm-banner .banner-box2{
+        widht: 60%;
+    }
+} */

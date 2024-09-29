@@ -250,7 +250,7 @@ div:nth-child(2) .envio-option {
 }
 
 .envio-option .input-2 {
-    gap: 31px;
+    justify-content: flex-end;
 }
 
 .envio-option .input-1 label,
