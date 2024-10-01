@@ -6,7 +6,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
-    background-color: #f5fff5;
+    background-color: #e3fbe3;
 }
 
 .banner-Checkout {
@@ -44,7 +44,7 @@
 }
 
 .Checkout-selection button:hover {
-    background-color: #4CAF50;
+    background-color: #44c448;
     color: white;
 }
 
@@ -66,11 +66,10 @@
     position: absolute;
     top: 100px;
     left: 20px;
-    background-color: white;
+    background-color: #e1ffe1;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    background-color: #f5fff5;
 }
 
 .back-button:hover {
@@ -82,8 +81,8 @@
     width: 35%;
     max-height: 620px;
     padding: 15px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: #44c448;
+    border: none;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -109,7 +108,7 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 .Checkout-subtitle {
@@ -145,12 +144,12 @@
     font-size: 14px;
     font-weight: 800;
     padding: 10px 0 10px 10px;
-    color: black;
+    color: #034f09;
 }
 
 .Checkout-total div p.total:nth-child(2) {
-    color: #07850d;
-    font-weight: 800;
+    color: #034f09;
+    font-weight: 600;
 }
 
 .productsCheckout {
@@ -160,7 +159,7 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #e3fbe3;
     padding: 10px 0 10px 6px;
     border-radius: 10px;
     text-align: center;
@@ -171,8 +170,8 @@
 .cartItem-Checkout {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 5px;
+    border-bottom: 1px solid #b3eec4;
+    padding: 5px 0 5px 0;
 }
 
 .Checkout-items {
@@ -196,7 +195,7 @@
 }
 
 .Checkout-items-left p {
-    color: #465b52;
+    color: #005b02;
     font-size: 14px;
     font-weight: 500;
 }
@@ -231,7 +230,7 @@ div:nth-child(2) .envio-p p {
     font-size: 14px;
     font-weight: 800;
     /* padding: 10px 0 10px 10px; */
-    color: black;
+    color: #034f09;
 }
 
 
@@ -259,10 +258,12 @@ div:nth-child(2) .envio-option {
     margin-bottom: 0;
     font-family: "Poppins", sans-serif;
     font-size: 12px;
+    color: #034f09;
+    font-weight: 600;
 }
 
 .envio-option .input-2 label span {
-    color: #07850d;
+    color: #034f09;
     margin-left: 3px;
     font-size: 13px;
     font-weight: 700;
@@ -368,5 +369,10 @@ div:nth-child(2) .envio-option {
         /* font-size: 17px; */
         padding: 0;
         font-weight: 700;
+    }
+
+    .envio-option .input-1 label,
+    .envio-option .input-2 label {
+        display: flex;
     }
 }

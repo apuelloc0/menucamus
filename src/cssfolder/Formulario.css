@@ -2,13 +2,11 @@
     width: 40%;
     max-height: 620px;
     padding: 20px;
-    /* border: 1px solid #ccc; */
+    border: none;
     border-radius: 10px;
     /* box-shadow: -4px 8px 5px rgba(0, 0, 0, 0.1); */
     font-family: "Poppins", sans-serif;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-
+    background-color: #44c448;
 }
 
 .form-container p {
@@ -22,7 +20,7 @@
     font-size: 20px;
     margin-bottom: 0;
     font-weight: 500;
-    color: gray;
+    color: white;
 }
 
 .form-group {
@@ -32,9 +30,9 @@
 label {
     display: block;
     margin: 0 0 5px 5px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 input[type="text"],
@@ -42,7 +40,9 @@ input[type="email"],
 select {
     width: 93%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: none;
+    background-color: #e3fbe3;
+    color: #034f09;
     border-radius: 4px;
     outline: none;
 }
@@ -72,7 +72,7 @@ select {
 
 .form-text p {
     font-size: 10px;
-    color: #9f9f9f;
+    color: white;
     margin: 20px 0;
 }
 
@@ -93,7 +93,7 @@ select {
     color: white;
     transition: 0.4s ease;
     height: 35px;
-    width: 90%;
+    width: 70%;
 }
 
 .Send-wha:hover {
@@ -114,5 +114,9 @@ select {
         width: 80%;
         min-height: 640px;
         margin-top: 30px;
+    }
+
+    .Send-wha {
+        width: 90%;
     }
 }

@@ -1,6 +1,6 @@
 .cartItem {
     height: 80px;
-    background-color: #effbef;
+    background-color: #e3fbe3;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@
     font-weight: 500;
     font-size: 13px;
     /* letter-spacing: 0.5px; */
-    color: #465b52;
+    color: #005b02;
 }
 
 .cartItem-buttons {

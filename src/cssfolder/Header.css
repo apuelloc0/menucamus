@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f5fff5;
+    background-color: #e3fbe3;
     height: 100px;
     position: fixed;
     width: 100%;
@@ -111,13 +111,14 @@
     color: white;
 }
 
+
 .buttonCart {
     position: relative;
     display: flex;
     align-items: center;
     margin-right: 40px;
     padding: 10px;
-    border: 1px solid rgb(177, 177, 177);
+    border: none;
     border-radius: 100px;
     cursor: pointer;
 }
@@ -133,8 +134,8 @@
 
 .productsNumber {
     position: absolute;
-    top: -8px;
-    right: -7px;
+    top: -3px;
+    right: 0;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -198,7 +199,7 @@
 .cta-button {
     display: flex;
     align-items: center;
-    background-color: lightgray;
+    background-color: #6bd26b;
     /* Color de WhatsApp */
     color: gray;
     border: none;

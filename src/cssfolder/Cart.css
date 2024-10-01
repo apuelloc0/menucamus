@@ -40,7 +40,7 @@ body.modal-open {
     /* Ajusta este valor para que se deslice fuera de la vista */
     width: 400px;
     height: 100vh;
-    background-color: #effbef;
+    background-color: #e3fbe3;
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
@@ -117,8 +117,8 @@ body.modal-open {
     color: black;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    background-color: rgb(227 255 231);
-    border-radius: 20px;
+    background-color: #c8ffc8;
+    border-radius: 10px;
     transition: ease-in 0.2s;
 }
 
