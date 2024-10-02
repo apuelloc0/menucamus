@@ -2,6 +2,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './pages/Home';
+// import AddToCart from './pages/AddToCart';
 import CartProvider from './Context/CartContext';
 import StoreOpenClose from './components/StoreOpenClose';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ function App() {
           <StoreOpenClose />
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* <Route path="/:id" element={<AddToCart />} /> */}
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
