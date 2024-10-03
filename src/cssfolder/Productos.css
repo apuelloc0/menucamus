@@ -17,6 +17,12 @@
     justify-content: space-around;
 }
 
+.Pro-Container  .no-results{
+    font-size: 28px;
+    font-weight: 500;
+    padding: 120px 0 120px 0;
+}
+
 .shirts-container a {
     text-decoration: none;
 }
@@ -176,6 +182,10 @@
         justify-content: center;
         gap: 15px;
         width: 100%;
+    }
+
+    .Pro-Container  .no-results{
+        font-size: 22px;
     }
 
     .Banner-arabe,

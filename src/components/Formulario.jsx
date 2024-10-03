@@ -19,7 +19,7 @@ const Formulario = () => {
         e.preventDefault();
 
         const datosUsuario = { nombre, apellido, numero, metodoPago, ubicacion, entrega };
-        const numeroTelefonico = "573023602591";
+        const numeroTelefonico = "584241774147";
         // Crear mensaje con los productos
         const mensaje = `Hola Kamus, me gustaría realizar el siguiente pedido: 
         \n- ${cartItems.map((producto) => `${producto.name} - $${producto.price} - Cantidad: ${producto.amount}`).join(', ')}. 
