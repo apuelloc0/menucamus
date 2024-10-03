@@ -11,6 +11,8 @@
     align-items: center;
     gap: 30px;
     background-image: url("../icons/bannervegetales.webp");
+    /* background-size: cover;
+    background-position: center; */
 }
 
 .slider-container {

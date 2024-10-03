@@ -45,8 +45,8 @@ const useGoogleSheets = (apiKey, spreadsheetId, range, filter) => {
                 }));
                 // Filtrar los datos según el filtro proporcionado
                 const filteredData = mappedData.filter(product => 
-                    product.type.toLowerCase().includes(filter.toLowerCase())
-                
+                    product.type.toLowerCase().includes(filter.toLowerCase()) ||
+                    product.name.toLowerCase().includes(filter.toLowerCase())
                 );
                 setData(filteredData);
             } catch (err) {
@@ -63,6 +63,7 @@ const useGoogleSheets = (apiKey, spreadsheetId, range, filter) => {
 };
 
 export default useGoogleSheets;
+
 
 
 

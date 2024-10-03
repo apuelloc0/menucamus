@@ -1,19 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "../cssfolder/AddToCart.css";
-import star from "../icons/staryellow.png";
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
+import useSheets from '../useSheets';
 // import Productos from '../components/Productos';
-import { useFetch } from '../UseFetch';
 
 
 const AddToCart = () => {
 
     const { addItemToCart, cartItems } = useContext(CartContext)
 
-    const { category, id } = useParams();
-    const { products, loading } = useFetch(`http://localhost:4000/${category}/${id}`)
-    console.log(products.name)
+    const { id } = useParams();
+
+    const { data, loading, error } = useSheets(
+        'AIzaSyBpHDI9OLva3Ed1ANXi27__yYzcjfm85Dg',
+        '1I9-znBWD0kn6pRlctgprPgYZySOjTlOeHdA9hfGLfaw',
+        'Hoja1!A2:G',
+        id
+    );
+    console.log(data)
 
     // ----Enviar pedido a Whatsapp---------
     const realizarPedido = () => {
@@ -36,8 +41,9 @@ const AddToCart = () => {
 
     return (
         <div className='AddToCart'>
+            <p>{id}</p>
 
-            <div className="AddToCart page-header about-header">
+            {/* <div className="AddToCart page-header about-header">
                 <h2>#let`s_talk</h2>
                 <p>LEAVE A MESSAGE, We love to hear from you!</p>
             </div>
@@ -56,13 +62,7 @@ const AddToCart = () => {
                             <span>{products.marca}</span>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur reprehenderit esse repellendus quasi omnis aliquam a impedit doloremque ut illo accusamus eos corrupti, temporibus debitis quas, ex eveniet culpa nisi.</p>
-                            <div className="star">
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                            </div>
+                            
                             <h4>U$S {products.price}</h4>
                             <button onClick={() => { addItemToCart(filtrarProductosId) }} className='AddToCart-Item' >Añadir al Carrito</button>
                             <button onClick={() => realizarPedido()} className='Whatsapp-Button'>Realizar Pedido</button>
@@ -70,7 +70,7 @@ const AddToCart = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </div>
     )

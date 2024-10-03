@@ -50,7 +50,7 @@ const Productos = () => {
             <div ref={containerRef} className="Pro-Container">
                 {
                     loading ? <Loading /> : currentItems.map((product, i) => (
-                        <Link key={i} to={""}>
+                        <Link key={i} to={`/${i}`}>
 
                             <div key={i} className="pro">
                                 <img src={product.img} alt={product.name} />

@@ -40,7 +40,7 @@ body.modal-open {
     /* Ajusta este valor para que se deslice fuera de la vista */
     width: 400px;
     height: 100vh;
-    background-color: #e3fbe3;
+    background-color: #e3fbe3eb;
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
