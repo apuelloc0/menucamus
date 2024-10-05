@@ -73,84 +73,6 @@
 
 /* ----Shirts------ */
 
-.shirts-container {
-    width: 95%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 20px;
-}
-
-.shirts-container a {
-    text-decoration: none;
-}
-
-.shirts-container .pro {
-    /* width: 23%; */
-    min-width: 250px;
-    height: 400px;
-    padding: 10px 12px;
-    border: 1px solid #cce7d0;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    margin: 15px 0;
-    transition: 0.3s ease;
-    position: relative;
-}
-
-.shirts-container .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-}
-
-.shirts-container .pro img {
-    width: 245px;
-    height: 260px;
-    border-radius: 20px;
-}
-
-.shirts-container .pro .des {
-    text-align: start;
-    padding: 10px 0;
-}
-
-.shirts-container .pro .des span {
-    color: #606063;
-    font-size: 12px;
-}
-
-.shirts-container .pro .des h5 {
-    margin: 10px 0 10px 0;
-    color: #1a1a1a;
-    font-size: 14px;
-}
-
-.shirts-container .pro .des .star img {
-    width: 13px;
-    height: 13px;
-}
-
-.shirts-container .pro .des h4 {
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #088178;
-}
-
-.shirts-container .pro a .shopping {
-    width: 40px;
-    height: 40px;
-    padding: 5px 5px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
-}
 
 /* -----Shirts----- */
 
@@ -396,6 +318,7 @@
         background-size: cover;
         margin-top: 92px; */
         flex-direction: column;
+        background-position: center;
     }
 
     .slider-container {

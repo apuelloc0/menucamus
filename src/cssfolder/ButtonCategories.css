@@ -54,7 +54,7 @@
     margin: 0;
     font-size: 17px;
     font-weight: 600;
-    color: rgb(27, 27, 27);
+    color: #04544e;
     white-space: nowrap;
     /* Evita que el texto se corte */
     overflow: hidden;
